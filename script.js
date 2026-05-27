@@ -101,8 +101,14 @@
     return [...new Set(entries.map((entry) => entry[key]).filter(Boolean))].sort((a, b) => a.localeCompare(b));
   }
 
+  function parseKNumber(catalogue) {
+    const m = catalogue.match(/K\.\s*(\d+)([a-z]*)/i);
+    if (!m) return Infinity;
+    return parseInt(m[1], 10) + (m[2] ? m[2].charCodeAt(0) / 1000 : 0);
+  }
+
   function byYearThenCity(a, b) {
-    return a.year - b.year || a.city.localeCompare(b.city);
+    return a.year - b.year || parseKNumber(a.catalogue) - parseKNumber(b.catalogue) || a.city.localeCompare(b.city);
   }
 
   function getEntryCoordinates(entry) {

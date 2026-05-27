@@ -433,6 +433,45 @@ window.MOZART_JOURNEY_DATA = [
     }
   },
   {
+    "id": "salzburg-1777-piano-concerto-9",
+    "year": 1777,
+    "city": "Salzburg",
+    "country": "Austria",
+    "place": {
+      "name": "Mozart Residence / Tanzmeisterhaus",
+      "address": "Makartplatz 8, Salzburg",
+      "kind": "家庭住所",
+      "certainty": "较稳",
+      "note": "K. 271 写于莫扎特仍以萨尔茨堡为居住和工作中心的阶段；Salzburg.info 对 Makartplatz 8 的说明可支撑这里作为家庭住所和萨尔茨堡生活核心。具体创作房间不可确认，因此页面只标到 Mozart Residence。",
+      "lat": 47.8034,
+      "lng": 13.0436,
+      "source": {
+        "label": "Salzburg.info: Mozart Residence",
+        "url": "https://www.salzburg.info/en/sights/museums/mozart-residence"
+      },
+      "image": {
+        "url": "https://www.salzburg.info/deskline/infrastruktur/objekte/Mozart-Wohnhaus_3859/1162616/image-thumb__1162616__slider-thumb/mozart-wohnhaus-am-makartplatz_3861@2x.9ce65690.webp",
+        "alt": "Mozart-Wohnhaus at Makartplatz in Salzburg",
+        "caption": "萨尔茨堡 Makartplatz 8 的 Mozart-Wohnhaus / Mozart Residence 外观。",
+        "sourceLabel": "Salzburg.info",
+        "sourceUrl": "https://www.salzburg.info/en/sights/museums/mozart-residence"
+      }
+    },
+    "lat": 47.8095,
+    "lng": 13.055,
+    "work": "Piano Concerto No. 9 in E-flat major",
+    "catalogue": "K. 271",
+    "genre": "Concerto",
+    "period": "1773-1781",
+    "context": "莫扎特在萨尔茨堡写下 K. 271，这首降 E 大调钢琴协奏曲常与 Jeunehomme / Jenamy 的名字相连。它最醒目的地方，是独奏钢琴很早便进入乐队对话。",
+    "meaning": "它突破了协奏曲只是炫技展示的常规：钢琴像戏剧人物一样与乐队对答，慢乐章情绪深沉，预示莫扎特维也纳钢琴协奏曲的成熟方向。",
+    "source": {
+      "label": "The Mozart Portal: K. 271",
+      "url": "https://www.mozartportal.com/en/composition/kv-271-piano-concerto-no-9-in-e-flat-jeunehomme",
+      "summary": "来源强调 K. 271 的独奏钢琴很早进入乐队对话，这在协奏曲传统中很醒目；它常被视为莫扎特钢琴协奏曲成熟的早期标志。"
+    }
+  },
+  {
     "id": "mannheim-1777-flute-quartet-1",
     "year": 1777,
     "city": "Mannheim",
@@ -500,45 +539,6 @@ window.MOZART_JOURNEY_DATA = [
       "label": "The Mozart Portal: K. 309",
       "url": "https://www.mozartportal.com/en/composition/kv-309-piano-sonata-no-7-in-c",
       "summary": "来源将 K. 309 放在 1777 年曼海姆时期；这首奏鸣曲的键盘写法明亮、外向，也可联系曼海姆乐派对力度和舞台效果的影响。"
-    }
-  },
-  {
-    "id": "salzburg-1777-piano-concerto-9",
-    "year": 1777,
-    "city": "Salzburg",
-    "country": "Austria",
-    "place": {
-      "name": "Mozart Residence / Tanzmeisterhaus",
-      "address": "Makartplatz 8, Salzburg",
-      "kind": "家庭住所",
-      "certainty": "较稳",
-      "note": "K. 271 写于莫扎特仍以萨尔茨堡为居住和工作中心的阶段；Salzburg.info 对 Makartplatz 8 的说明可支撑这里作为家庭住所和萨尔茨堡生活核心。具体创作房间不可确认，因此页面只标到 Mozart Residence。",
-      "lat": 47.8034,
-      "lng": 13.0436,
-      "source": {
-        "label": "Salzburg.info: Mozart Residence",
-        "url": "https://www.salzburg.info/en/sights/museums/mozart-residence"
-      },
-      "image": {
-        "url": "https://www.salzburg.info/deskline/infrastruktur/objekte/Mozart-Wohnhaus_3859/1162616/image-thumb__1162616__slider-thumb/mozart-wohnhaus-am-makartplatz_3861@2x.9ce65690.webp",
-        "alt": "Mozart-Wohnhaus at Makartplatz in Salzburg",
-        "caption": "萨尔茨堡 Makartplatz 8 的 Mozart-Wohnhaus / Mozart Residence 外观。",
-        "sourceLabel": "Salzburg.info",
-        "sourceUrl": "https://www.salzburg.info/en/sights/museums/mozart-residence"
-      }
-    },
-    "lat": 47.8095,
-    "lng": 13.055,
-    "work": "Piano Concerto No. 9 in E-flat major",
-    "catalogue": "K. 271",
-    "genre": "Concerto",
-    "period": "1773-1781",
-    "context": "莫扎特在萨尔茨堡写下 K. 271，这首降 E 大调钢琴协奏曲常与 Jeunehomme / Jenamy 的名字相连。它最醒目的地方，是独奏钢琴很早便进入乐队对话。",
-    "meaning": "它突破了协奏曲只是炫技展示的常规：钢琴像戏剧人物一样与乐队对答，慢乐章情绪深沉，预示莫扎特维也纳钢琴协奏曲的成熟方向。",
-    "source": {
-      "label": "The Mozart Portal: K. 271",
-      "url": "https://www.mozartportal.com/en/composition/kv-271-piano-concerto-no-9-in-e-flat-jeunehomme",
-      "summary": "来源强调 K. 271 的独奏钢琴很早进入乐队对话，这在协奏曲传统中很醒目；它常被视为莫扎特钢琴协奏曲成熟的早期标志。"
     }
   },
   {
@@ -700,45 +700,6 @@ window.MOZART_JOURNEY_DATA = [
     }
   },
   {
-    "id": "munich-1781-idomeneo",
-    "year": 1781,
-    "city": "Munich",
-    "country": "Germany",
-    "place": {
-      "name": "Cuvilliés Theatre, Munich Residenz",
-      "address": "Residenzstrasse 1, Munich",
-      "kind": "首演剧院",
-      "certainty": "较稳",
-      "note": "慕尼黑 Cuvilliés Theatre 是巴伐利亚宫廷歌剧的重要场所，《Idomeneo》属于莫扎特在慕尼黑宫廷剧院体系中的关键舞台实验。页面把它标为首演剧院，但不把排练或写作过程压缩成某个确定房间。",
-      "lat": 48.1415,
-      "lng": 11.5781,
-      "source": {
-        "label": "Mozart Society of America: Cuvilliés Theater",
-        "url": "https://www.mozartsocietyofamerica.org/munichs-cuvillies-theater-a-stronghold-of-metastasian-opera-turned-into-a-laboratory-of-mozarts-musical-theater/"
-      },
-      "image": {
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/M%C3%BCnchen%20Cuvilli%C3%A9s-Theater%20Logen.jpg?width=900",
-        "alt": "Cuvillies Theatre interior in Munich",
-        "caption": "慕尼黑 Cuvilliés Theatre，巴伐利亚宫廷歌剧场所，与《Idomeneo》首演语境相连。",
-        "sourceLabel": "Wikimedia Commons",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C3%BCnchen_Cuvilli%C3%A9s-Theater_Logen.jpg"
-      }
-    },
-    "lat": 48.1351,
-    "lng": 11.582,
-    "work": "Idomeneo, re di Creta",
-    "catalogue": "K. 366",
-    "genre": "Opera",
-    "period": "1773-1781",
-    "context": "《Idomeneo》创作于 1780-1781 年，莫扎特从萨尔茨堡前往慕尼黑准备嘉年华季演出。作品为慕尼黑宫廷剧院而写，吸收了 Mannheim 乐队传统、宫廷歌剧资源和意大利 opera seria 的形式。",
-    "meaning": "这不是一部只按旧规则运转的英雄歌剧。海难、誓言、合唱、风暴和乐队色彩一起推动剧情，使神话题材变成公共危机和个人责任的舞台实验。",
-    "source": {
-      "label": "The Mozart Portal: K. 366",
-      "url": "https://www.mozartportal.com/en/composition/kv-366-idomeneo-re-di-creta",
-      "summary": "来源把《Idomeneo》放在慕尼黑宫廷歌剧环境中，强调它结合 opera seria、合唱、舞蹈和丰富管弦乐，是莫扎特成熟歌剧道路上的关键转折。"
-    }
-  },
-  {
     "id": "vienna-1781-ah-vous-dirai-je-maman",
     "year": 1781,
     "city": "Vienna",
@@ -778,6 +739,45 @@ window.MOZART_JOURNEY_DATA = [
       "label": "The Mozart Portal: K. 265",
       "url": "https://www.mozartportal.com/en/composition/kv-265-12-variations-in-c-on-ah-vous-dirai-je-maman",
       "summary": "来源把 K. 265 标为以《Ah, vous dirai-je, Maman》为主题的 C 大调变奏曲；熟悉旋律被变成技巧、幽默和结构变化的展示。"
+    }
+  },
+  {
+    "id": "munich-1781-idomeneo",
+    "year": 1781,
+    "city": "Munich",
+    "country": "Germany",
+    "place": {
+      "name": "Cuvilliés Theatre, Munich Residenz",
+      "address": "Residenzstrasse 1, Munich",
+      "kind": "首演剧院",
+      "certainty": "较稳",
+      "note": "慕尼黑 Cuvilliés Theatre 是巴伐利亚宫廷歌剧的重要场所，《Idomeneo》属于莫扎特在慕尼黑宫廷剧院体系中的关键舞台实验。页面把它标为首演剧院，但不把排练或写作过程压缩成某个确定房间。",
+      "lat": 48.1415,
+      "lng": 11.5781,
+      "source": {
+        "label": "Mozart Society of America: Cuvilliés Theater",
+        "url": "https://www.mozartsocietyofamerica.org/munichs-cuvillies-theater-a-stronghold-of-metastasian-opera-turned-into-a-laboratory-of-mozarts-musical-theater/"
+      },
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/M%C3%BCnchen%20Cuvilli%C3%A9s-Theater%20Logen.jpg?width=900",
+        "alt": "Cuvillies Theatre interior in Munich",
+        "caption": "慕尼黑 Cuvilliés Theatre，巴伐利亚宫廷歌剧场所，与《Idomeneo》首演语境相连。",
+        "sourceLabel": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M%C3%BCnchen_Cuvilli%C3%A9s-Theater_Logen.jpg"
+      }
+    },
+    "lat": 48.1351,
+    "lng": 11.582,
+    "work": "Idomeneo, re di Creta",
+    "catalogue": "K. 366",
+    "genre": "Opera",
+    "period": "1773-1781",
+    "context": "《Idomeneo》创作于 1780-1781 年，莫扎特从萨尔茨堡前往慕尼黑准备嘉年华季演出。作品为慕尼黑宫廷剧院而写，吸收了 Mannheim 乐队传统、宫廷歌剧资源和意大利 opera seria 的形式。",
+    "meaning": "这不是一部只按旧规则运转的英雄歌剧。海难、誓言、合唱、风暴和乐队色彩一起推动剧情，使神话题材变成公共危机和个人责任的舞台实验。",
+    "source": {
+      "label": "The Mozart Portal: K. 366",
+      "url": "https://www.mozartportal.com/en/composition/kv-366-idomeneo-re-di-creta",
+      "summary": "来源把《Idomeneo》放在慕尼黑宫廷歌剧环境中，强调它结合 opera seria、合唱、舞蹈和丰富管弦乐，是莫扎特成熟歌剧道路上的关键转折。"
     }
   },
   {
@@ -1108,45 +1108,6 @@ window.MOZART_JOURNEY_DATA = [
     ]
   },
   {
-    "id": "prague-1787-don-giovanni",
-    "year": 1787,
-    "city": "Prague",
-    "country": "Bohemia",
-    "place": {
-      "name": "Estates Theatre",
-      "address": "Ovocny trh 1, Prague",
-      "kind": "首演剧院",
-      "certainty": "较稳",
-      "note": "《Don Giovanni》与布拉格的接受环境密切相关，并于 1787 年在 Estates Theatre 首演。关于作曲是否集中在某处住所，资料说法容易混入传说；页面因此优先标注首演剧院，而不把 Bertramka 等地点写成确定创作房间。",
-      "lat": 50.0864,
-      "lng": 14.4249,
-      "source": {
-        "label": "The Mozart Portal: Don Giovanni",
-        "url": "https://www.mozartportal.com/en/composition/kv-527-don-giovanni"
-      },
-      "image": {
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estates%20Theatre%2C%20Prague.jpg?width=900",
-        "alt": "Estates Theatre in Prague exterior",
-        "caption": "布拉格 Estates Theatre，《Don Giovanni》1787 年首演剧院。",
-        "sourceLabel": "Wikimedia Commons",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Estates_Theatre,_Prague.jpg"
-      }
-    },
-    "lat": 50.0755,
-    "lng": 14.4378,
-    "work": "Don Giovanni",
-    "catalogue": "K. 527",
-    "genre": "Opera",
-    "period": "1782-1791",
-    "context": "《Don Giovanni》是莫扎特为布拉格完成的两幕 dramma giocoso，1787 年 10 月 29 日在 Estates Theatre 首演。布拉格此前热烈接受《费加罗》，为这部新作提供了敏锐的歌剧观众和舞台环境。",
-    "meaning": "它从 D 小调的阴影进入，却使用喜剧、诱惑、伪装和惩罚的混合语言。作品的力量在于不把 Don Giovanni 简化成单一寓言，而让自由、暴力和道德审判同时存在。",
-    "source": {
-      "label": "The Mozart Portal: K. 527",
-      "url": "https://www.mozartportal.com/en/composition/kv-527-don-giovanni",
-      "summary": "来源将《Don Giovanni》称为 dramma giocoso，兼具喜剧、黑暗戏剧和道德审判；作品与布拉格首演和当地观众的热情接受紧密相关。"
-    }
-  },
-  {
     "id": "vienna-1787-string-quintet-4",
     "year": 1787,
     "city": "Vienna",
@@ -1233,6 +1194,45 @@ window.MOZART_JOURNEY_DATA = [
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Eine%20kleine%20Nachtmusik%20K%20525%20I.%20Allegro",
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Eine%20kleine%20Nachtmusik%20K%20525%20I.%20Allegro",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Eine%20kleine%20Nachtmusik%20K%20525%20I.%20Allegro"
+    }
+  },
+  {
+    "id": "prague-1787-don-giovanni",
+    "year": 1787,
+    "city": "Prague",
+    "country": "Bohemia",
+    "place": {
+      "name": "Estates Theatre",
+      "address": "Ovocny trh 1, Prague",
+      "kind": "首演剧院",
+      "certainty": "较稳",
+      "note": "《Don Giovanni》与布拉格的接受环境密切相关，并于 1787 年在 Estates Theatre 首演。关于作曲是否集中在某处住所，资料说法容易混入传说；页面因此优先标注首演剧院，而不把 Bertramka 等地点写成确定创作房间。",
+      "lat": 50.0864,
+      "lng": 14.4249,
+      "source": {
+        "label": "The Mozart Portal: Don Giovanni",
+        "url": "https://www.mozartportal.com/en/composition/kv-527-don-giovanni"
+      },
+      "image": {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estates%20Theatre%2C%20Prague.jpg?width=900",
+        "alt": "Estates Theatre in Prague exterior",
+        "caption": "布拉格 Estates Theatre，《Don Giovanni》1787 年首演剧院。",
+        "sourceLabel": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Estates_Theatre,_Prague.jpg"
+      }
+    },
+    "lat": 50.0755,
+    "lng": 14.4378,
+    "work": "Don Giovanni",
+    "catalogue": "K. 527",
+    "genre": "Opera",
+    "period": "1782-1791",
+    "context": "《Don Giovanni》是莫扎特为布拉格完成的两幕 dramma giocoso，1787 年 10 月 29 日在 Estates Theatre 首演。布拉格此前热烈接受《费加罗》，为这部新作提供了敏锐的歌剧观众和舞台环境。",
+    "meaning": "它从 D 小调的阴影进入，却使用喜剧、诱惑、伪装和惩罚的混合语言。作品的力量在于不把 Don Giovanni 简化成单一寓言，而让自由、暴力和道德审判同时存在。",
+    "source": {
+      "label": "The Mozart Portal: K. 527",
+      "url": "https://www.mozartportal.com/en/composition/kv-527-don-giovanni",
+      "summary": "来源将《Don Giovanni》称为 dramma giocoso，兼具喜剧、黑暗戏剧和道德审判；作品与布拉格首演和当地观众的热情接受紧密相关。"
     }
   },
   {
