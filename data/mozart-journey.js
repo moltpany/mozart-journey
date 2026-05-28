@@ -193,7 +193,7 @@ window.MOZART_JOURNEY_DATA = [
     "listening": {
       "target": "Divertimento No. 1 in D major, K. 136, I. Allegro",
       "note": "Coffee playlist：取明亮、轻快、启动感强的第一乐章。",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Divertimento%20No.%201%20in%20D%20major%20K%20136%20Allegro",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Divertimento%20No.%201%20in%20D%20major%20K%20136",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Divertimento%20No.%201%20in%20D%20major%20K%20136%20Allegro",
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Divertimento%20No.%201%20in%20D%20major%20K%20136%20Allegro",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Divertimento%20No.%201%20in%20D%20major%20K%20136%20Allegro"
@@ -326,7 +326,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Violin%20Concerto%203%20K%20216%20Adagio",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Violin%20Concerto%203%20K%20216%20Adagio",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Violin%20Concerto%203%20K%20216%20Adagio",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%203%20in%20G%20major%20K%20216%20II.%20Adagio"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%203%20in%20G%20major%20K%20216"
     }
   },
   {
@@ -429,7 +429,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Violin%20Concerto%205%20K%20219%20Adagio",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Violin%20Concerto%205%20K%20219%20Adagio",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Violin%20Concerto%205%20K%20219%20Adagio",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%205%20in%20A%20major%20K%20219%20II.%20Adagio"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%205%20in%20A%20major%20K%20219"
     }
   },
   {
@@ -617,7 +617,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Flute%20Harp%20Concerto%20K%20299%20Andantino",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Flute%20Harp%20Concerto%20K%20299%20Andantino",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Flute%20Harp%20Concerto%20K%20299%20Andantino",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Flute%20and%20Harp%20Concerto%20in%20C%20major%20K%20299%20II.%20Andantino"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Flute%20and%20Harp%20Concerto%20in%20C%20major%20K%20299"
     }
   },
   {
@@ -965,7 +965,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Concerto%2021%20K%20467%20Andante",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Concerto%2021%20K%20467%20Andante%20Mitsuko%20Uchida",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Concerto%2021%20K%20467%20Andante",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2021%20in%20C%20major%20K%20467%20II.%20Andante"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2021%20in%20C%20major%20K%20467"
     }
   },
   {
@@ -1015,7 +1015,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Concerto%2023%20K%20488%20Adagio",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Concerto%2023%20K%20488%20Adagio%20Mitsuko%20Uchida",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Concerto%2023%20K%20488%20Adagio",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2023%20in%20A%20major%20K%20488%20II.%20Adagio"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2023%20in%20A%20major%20K%20488"
     }
   },
   {
@@ -1101,7 +1101,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Le%20Nozze%20di%20Figaro%20Overture%20K%20492",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Le%20Nozze%20di%20Figaro%20Overture%20K%20492",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Le%20Nozze%20di%20Figaro%20Overture%20K%20492",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Le%20nozze%20di%20Figaro%20K%20492%20Sinfonia%20%2F%20Overture"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Le%20nozze%20di%20Figaro%20K%20492%20Sinfonia%20Overture"
     },
     "collections": [
       "coffee-playlist"
@@ -1190,7 +1190,7 @@ window.MOZART_JOURNEY_DATA = [
     "listening": {
       "target": "Eine kleine Nachtmusik, K. 525, I. Allegro",
       "note": "我喜欢的：播放入口先指向最熟悉、最有启动感的第一乐章。",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Eine%20kleine%20Nachtmusik%20K%20525%20I.%20Allegro",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Eine%20kleine%20Nachtmusik%20K%20525",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Eine%20kleine%20Nachtmusik%20K%20525%20I.%20Allegro",
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Eine%20kleine%20Nachtmusik%20K%20525%20I.%20Allegro",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Eine%20kleine%20Nachtmusik%20K%20525%20I.%20Allegro"
@@ -1283,7 +1283,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Sonata%2016%20K%20545%20Andante",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%2016%20K%20545%20Andante%20Mitsuko%20Uchida",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%2016%20K%20545%20Andante",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2016%20in%20C%20major%20K%20545%20II.%20Andante"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2016%20in%20C%20major%20K%20545"
     }
   },
   {
@@ -1372,7 +1372,7 @@ window.MOZART_JOURNEY_DATA = [
     "listening": {
       "target": "Symphony No. 41 in C major, K. 551, IV. Molto allegro",
       "note": "Coffee playlist：建议从终乐章进入，明亮、有推进力，也最能听到 Jupiter 的结构兴奋。",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Symphony%20No.%2041%20K%20551%20Jupiter%20Molto%20allegro",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Symphony%20No.%2041%20K%20551%20Jupiter",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Symphony%20No.%2041%20K%20551%20Jupiter%20Molto%20allegro",
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Symphony%20No.%2041%20K%20551%20Jupiter%20Molto%20allegro",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Symphony%20No.%2041%20K%20551%20Jupiter%20Molto%20allegro"
@@ -1543,7 +1543,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Clarinet%20Concerto%20K%20622%20Adagio",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Clarinet%20Concerto%20K%20622%20Adagio",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Clarinet%20Concerto%20K%20622%20Adagio",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Clarinet%20Concerto%20in%20A%20major%20K%20622%20II.%20Adagio"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Clarinet%20Concerto%20in%20A%20major%20K%20622"
     }
   },
   {
