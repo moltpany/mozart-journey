@@ -377,7 +377,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Violin%20Concerto%204%20K%20218",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Violin%20Concerto%204%20K%20218",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Violin%20Concerto%204%20K%20218",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%204%20in%20D%20major%20K%20218%20complete%20concerto"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%204%20in%20D%20major%20K%20218"
     }
   },
   {
@@ -696,7 +696,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Sonata%208%20K%20310",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%208%20K%20310%20A%20minor%20Mitsuko%20Uchida",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%208%20K%20310%20A%20minor",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%208%20in%20A%20minor%20K%20310%20complete%20sonata"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%208%20in%20A%20minor%20K%20310"
     }
   },
   {
@@ -820,7 +820,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Sonata%2010%20K%20330",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%2010%20K%20330%20Mitsuko%20Uchida",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%2010%20K%20330",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2010%20in%20C%20major%20K%20330%20complete%20sonata"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2010%20in%20C%20major%20K%20330"
     }
   },
   {
@@ -861,7 +861,7 @@ window.MOZART_JOURNEY_DATA = [
     "listening": {
       "target": "Piano Sonata No. 11 in A major, K. 331, III. Alla Turca",
       "note": "Coffee playlist：播放入口优先指向最容易识别、启动感强的 Alla Turca。Apple Music 优先搜 Mitsuko Uchida。",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2011%20K%20331%20Alla%20Turca%20Mitsuko%20Uchida",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2011%20K%20331",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%20No.%2011%20K%20331%20Alla%20Turca%20Mitsuko%20Uchida",
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Sonata%20No.%2011%20K%20331%20Alla%20Turca",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%20No.%2011%20K%20331%20Alla%20Turca%20Mitsuko%20Uchida"
@@ -911,7 +911,7 @@ window.MOZART_JOURNEY_DATA = [
     "listening": {
       "target": "Piano Concerto No. 20 in D minor, K. 466, complete concerto",
       "note": "压力大的时候会听：D 小调张力很强，适合完整听，也可从第一乐章进入。",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2020%20in%20D%20minor%20K%20466%20complete%20concerto",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2020%20in%20D%20minor%20K%20466",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Concerto%2020%20K%20466%20D%20minor%20Mitsuko%20Uchida",
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Concerto%2020%20K%20466",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Concerto%2020%20K%20466%20D%20minor"
@@ -1101,7 +1101,7 @@ window.MOZART_JOURNEY_DATA = [
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Le%20Nozze%20di%20Figaro%20Overture%20K%20492",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Le%20Nozze%20di%20Figaro%20Overture%20K%20492",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Le%20Nozze%20di%20Figaro%20Overture%20K%20492",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Le%20nozze%20di%20Figaro%20K%20492%20Sinfonia%20Overture"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Le%20nozze%20di%20Figaro%20K%20492"
     },
     "collections": [
       "coffee-playlist"
