@@ -4,60 +4,245 @@
   const DATA_URL = "data/mozart-journey.json";
   const MOZART_BIRTH_YEAR = 1756;
   const THEME_STORAGE_KEY = "mozart-journey-theme";
+  const LANG_STORAGE_KEY = "mozart-journey-lang";
+  const SUPPORTED_LANGS = ["zh", "en"];
   const COLLECTIONS = [
     {
       id: "salzburg-trilogy",
       title: "萨尔茨堡三部曲",
       description: "1775 年萨尔茨堡时期的三首小提琴协奏曲，明亮、优雅，也带着青年莫扎特的舞台感。",
+      titleEn: "Salzburg Trilogy",
+      descriptionEn: "Three violin concertos from the 1775 Salzburg period — bright, elegant, and already full of the young Mozart's sense of the stage.",
     },
     {
       id: "pressure-relief",
       title: "压力大的时候会听",
       description: "两首小调作品：不是简单安慰，而是把紧张情绪放进清晰结构里。",
+      titleEn: "For Stressful Days",
+      descriptionEn: "Two minor-key works: not easy comfort, but tension organised into clear structure.",
     },
     {
       id: "job-search",
       title: "Mozart 找工作",
       description: "曼海姆、巴黎和早期维也纳阶段的作品，听见才华、委约、求职和不确定性并行。",
+      titleEn: "Mozart Job-Hunting",
+      descriptionEn: "Works from the Mannheim, Paris and early Vienna years, where talent, commissions, job-seeking and uncertainty all run side by side.",
     },
     {
       id: "favorite-playing",
       title: "我自己最喜欢弹的",
       description: "放在琴上会反复回来的作品，先记录曲目，后续再补到地图节点。",
+      titleEn: "My Favourites to Play",
+      descriptionEn: "Pieces I keep coming back to at the keyboard — logged first, to be tied to map nodes later.",
     },
     {
       id: "heard-live",
       title: "我听过现场的",
       description: "和现场经验绑定的作品，优先保留听过的具体曲目。",
+      titleEn: "Heard Live",
+      descriptionEn: "Works tied to a live experience, keeping the specific pieces I actually heard in concert.",
     },
     {
       id: "personal-favorites",
       title: "我喜欢的",
       description: "不是单一情绪标签，而是长期会回来的旋律、慢乐章和音色记忆。",
+      titleEn: "Personal Favourites",
+      descriptionEn: "Not a single mood tag, but the melodies, slow movements and timbres I return to over time.",
     },
     {
       id: "favorite-album",
       title: "我喜欢的专辑",
       description: "按专辑记忆整理的钢琴作品组，后续可逐步补足地图节点。",
+      titleEn: "Favourite Album",
+      descriptionEn: "A group of piano works organised by album memory, to be linked to map nodes step by step.",
     },
     {
       id: "coffee-playlist",
       title: "Mozart Coffee Playlist",
       description: "适合清晨、咖啡和轻快启动状态的莫扎特。",
+      titleEn: "Mozart Coffee Playlist",
+      descriptionEn: "Mozart for mornings, coffee and an easy, upbeat start to the day.",
     },
     {
       id: "sleep-playlist",
       title: "Mozart Sleep Playlist",
       description: "多取第二乐章：放松、飞行、黄昏和睡前听感。",
+      titleEn: "Mozart Sleep Playlist",
+      descriptionEn: "Mostly slow movements: relaxed, weightless, dusk-and-bedtime listening.",
     },
   ];
+
+  const I18N = {
+    zh: {
+      "doc.title": "莫扎特足迹互动地图",
+      "nav.aria": "页面导航",
+      "nav.collections": "收藏",
+      "nav.timeline": "时间线",
+      "nav.detail": "作品详情",
+      "nav.sources": "来源",
+      "hero.eyebrow": "1756-1791 · 欧洲城市与作品",
+      "hero.title": "莫扎特的足迹",
+      "hero.copy": "沿着地图与年份时间线，查看莫扎特在伦敦、维也纳、米兰、萨尔茨堡、巴黎、慕尼黑与布拉格等地留下的代表作品。",
+      "filters.kicker": "筛选",
+      "filters.title": "按城市、时期和类型探索",
+      "filters.formAria": "足迹筛选",
+      "filter.search": "搜索",
+      "filter.searchPlaceholder": "K. 488 / 协奏曲 / Vienna",
+      "filter.city": "城市",
+      "filter.period": "时期",
+      "filter.genre": "类型",
+      "period.all": "全部时期",
+      "period.p1": "1756-1772 童年与旅行",
+      "period.p2": "1773-1781 萨尔茨堡与求职",
+      "period.p3": "1782-1791 维也纳成熟期",
+      "select.allCities": "全部城市",
+      "select.allGenres": "全部类型",
+      "explorer.aria": "莫扎特足迹地图与时间线",
+      "map.kicker": "地图",
+      "map.title": "欧洲足迹",
+      "map.appAria": "莫扎特旅行城市互动地图",
+      "map.warning": "地图底图需要联网加载；下方时间线和作品详情仍可正常阅读。",
+      "timeline.kicker": "时间线",
+      "timeline.title": "年份与作品",
+      "action.viewDetail": "查看作品详情",
+      "detail.kicker": "作品详情",
+      "detail.workPlaceholder": "选择一个地点或年份",
+      "detail.metaPlaceholder": "点击地图点位或时间线节点后，这里会显示作品背景与意义。",
+      "detail.context": "创作背景",
+      "detail.meaning": "含义",
+      "detail.waiting": "等待选择。",
+      "detail.placeSource": "查看地点来源",
+      "detail.imageSource": "图片来源",
+      "detail.mapLink": "查看地图位置",
+      "detail.source": "查看参考来源",
+      "detail.noMatchWork": "没有匹配的足迹",
+      "detail.adjustFilters": "请调整筛选条件。",
+      "detail.noResult": "当前筛选没有结果。",
+      "collections.kicker": "我的收藏",
+      "collections.title": "按你的听感场景整理",
+      "collections.navAria": "收藏分组快速导航",
+      "sources.kicker": "资料说明",
+      "sources.title": "保守表述，便于后续扩展",
+      "sources.intro": "第一版选取少量关键节点，来源字段保存在 JSON 数据中。对委约、首演或用途不确定的作品，页面采用“通常认为”“具体场合不清楚”等保守表达。",
+      "footer.text": "静态网页原型 · Leaflet + OpenStreetMap · 内容可在 <code>data/mozart-journey.json</code> 中维护",
+      "theme.toLight": "白天",
+      "theme.toDark": "黑夜",
+      "theme.ariaToLight": "切换到白天模式",
+      "theme.ariaToDark": "切换到黑夜模式",
+      "lang.label": "EN",
+      "lang.aria": "切换到英文界面",
+      "listening.targetPrefix": "播放目标：",
+      "listening.noteFallback": "听这首作品",
+      "place.imageError": "地点图片暂时无法加载，可查看图片来源。",
+      "error.noData": "数据未加载",
+      "error.loadFailWork": "数据加载失败",
+      "error.loadFailMeta": "请通过本地静态服务器打开本页面，例如 python -m http.server 8000。",
+      "error.loadFailContext": "浏览器直接打开 file:// 页面时，可能会禁止读取 data/mozart-journey.json。",
+      "error.loadFailMeaning": "启动本地服务器后再访问 http://localhost:8000 即可完整查看地图与时间线。",
+    },
+    en: {
+      "doc.title": "Mozart Journey · Interactive Map",
+      "nav.aria": "Page navigation",
+      "nav.collections": "Collections",
+      "nav.timeline": "Timeline",
+      "nav.detail": "Work detail",
+      "nav.sources": "Sources",
+      "hero.eyebrow": "1756-1791 · European cities & works",
+      "hero.title": "Mozart's Journey",
+      "hero.copy": "Follow the map and the year-by-year timeline to see the works Mozart left in London, Vienna, Milan, Salzburg, Paris, Munich, Prague and beyond.",
+      "filters.kicker": "Filter",
+      "filters.title": "Explore by city, period and genre",
+      "filters.formAria": "Journey filters",
+      "filter.search": "Search",
+      "filter.searchPlaceholder": "K. 488 / Concerto / Vienna",
+      "filter.city": "City",
+      "filter.period": "Period",
+      "filter.genre": "Genre",
+      "period.all": "All periods",
+      "period.p1": "1756-1772 Childhood & travels",
+      "period.p2": "1773-1781 Salzburg & job-seeking",
+      "period.p3": "1782-1791 Vienna maturity",
+      "select.allCities": "All cities",
+      "select.allGenres": "All genres",
+      "explorer.aria": "Mozart journey map and timeline",
+      "map.kicker": "Map",
+      "map.title": "European journey",
+      "map.appAria": "Interactive map of cities Mozart travelled to",
+      "map.warning": "The base map needs an internet connection to load; the timeline and work details below remain fully readable.",
+      "timeline.kicker": "Timeline",
+      "timeline.title": "Years & works",
+      "action.viewDetail": "View work detail",
+      "detail.kicker": "Work detail",
+      "detail.workPlaceholder": "Select a place or a year",
+      "detail.metaPlaceholder": "Click a map marker or a timeline node to see the work's background and meaning here.",
+      "detail.context": "Background",
+      "detail.meaning": "Meaning",
+      "detail.waiting": "Waiting for a selection.",
+      "detail.placeSource": "View place source",
+      "detail.imageSource": "Image source",
+      "detail.mapLink": "Show on map",
+      "detail.source": "View reference source",
+      "detail.noMatchWork": "No matching stops",
+      "detail.adjustFilters": "Try adjusting the filters.",
+      "detail.noResult": "No results for the current filters.",
+      "collections.kicker": "My collections",
+      "collections.title": "Grouped by listening mood",
+      "collections.navAria": "Quick navigation for collection groups",
+      "sources.kicker": "About the sources",
+      "sources.title": "Cautious wording, easy to extend later",
+      "sources.intro": "This first version picks a small set of key nodes, with source fields kept in the JSON data. For works whose commission, premiere or purpose is uncertain, the page uses cautious wording such as “generally thought” or “the exact occasion is unclear”.",
+      "footer.text": "Static web prototype · Leaflet + OpenStreetMap · content lives in <code>data/mozart-journey.json</code>",
+      "theme.toLight": "Light",
+      "theme.toDark": "Dark",
+      "theme.ariaToLight": "Switch to light mode",
+      "theme.ariaToDark": "Switch to dark mode",
+      "lang.label": "中文",
+      "lang.aria": "Switch to Chinese interface",
+      "listening.targetPrefix": "Now playing: ",
+      "listening.noteFallback": "Listen to this work",
+      "place.imageError": "The place image can't load right now — see the image source.",
+      "error.noData": "Data not loaded",
+      "error.loadFailWork": "Failed to load data",
+      "error.loadFailMeta": "Please open this page via a local static server, e.g. python -m http.server 8000.",
+      "error.loadFailContext": "Opening the page directly as a file:// URL may block reading data/mozart-journey.json.",
+      "error.loadFailMeaning": "Start a local server and visit http://localhost:8000 to see the full map and timeline.",
+    },
+  };
   const state = {
     entries: [],
     filtered: [],
     selectedId: null,
     map: null,
     markers: new Map(),
+    lang: "zh",
   };
+
+  function normalizeLang(lang) {
+    return SUPPORTED_LANGS.includes(lang) ? lang : "zh";
+  }
+
+  function t(key) {
+    const lang = normalizeLang(state.lang);
+    const dict = I18N[lang] || I18N.zh;
+    if (Object.prototype.hasOwnProperty.call(dict, key)) {
+      return dict[key];
+    }
+    return I18N.zh[key] !== undefined ? I18N.zh[key] : key;
+  }
+
+  function sep() {
+    return normalizeLang(state.lang) === "en" ? ": " : "：";
+  }
+
+  function collectionTitle(collection) {
+    return normalizeLang(state.lang) === "en" && collection.titleEn ? collection.titleEn : collection.title;
+  }
+
+  function collectionDescription(collection) {
+    return normalizeLang(state.lang) === "en" && collection.descriptionEn
+      ? collection.descriptionEn
+      : collection.description;
+  }
 
   function parsePeriod(period) {
     if (!period || period === "all") {
@@ -101,8 +286,14 @@
     return [...new Set(entries.map((entry) => entry[key]).filter(Boolean))].sort((a, b) => a.localeCompare(b));
   }
 
+  function parseKNumber(catalogue) {
+    const m = catalogue.match(/K\.\s*(\d+)([a-z]*)/i);
+    if (!m) return Infinity;
+    return parseInt(m[1], 10) + (m[2] ? m[2].charCodeAt(0) / 1000 : 0);
+  }
+
   function byYearThenCity(a, b) {
-    return a.year - b.year || a.city.localeCompare(b.city);
+    return a.year - b.year || parseKNumber(a.catalogue) - parseKNumber(b.catalogue) || a.city.localeCompare(b.city);
   }
 
   function getEntryCoordinates(entry) {
@@ -117,7 +308,8 @@
   }
 
   function formatAge(year) {
-    return `${getAge(year)} 岁`;
+    const age = getAge(year);
+    return normalizeLang(state.lang) === "en" ? `age ${age}` : `${age} 岁`;
   }
 
   function getCollectionGroups(entries) {
@@ -175,9 +367,9 @@
     const button = $("theme-toggle");
     if (button) {
       const isDark = normalized === "dark";
-      button.textContent = isDark ? "白天" : "黑夜";
+      button.textContent = isDark ? t("theme.toLight") : t("theme.toDark");
       button.setAttribute("aria-pressed", isDark ? "true" : "false");
-      button.setAttribute("aria-label", isDark ? "切换到白天模式" : "切换到黑夜模式");
+      button.setAttribute("aria-label", isDark ? t("theme.ariaToLight") : t("theme.ariaToDark"));
     }
     if (persist) {
       saveTheme(normalized);
@@ -206,6 +398,104 @@
     const button = $("theme-toggle");
     if (button) {
       button.addEventListener("click", toggleTheme);
+    }
+  }
+
+  function getStoredLang() {
+    try {
+      return window.localStorage ? window.localStorage.getItem(LANG_STORAGE_KEY) : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function saveLang(lang) {
+    try {
+      if (window.localStorage) {
+        window.localStorage.setItem(LANG_STORAGE_KEY, lang);
+      }
+    } catch (error) {
+      // localStorage can be unavailable for file:// or privacy-restricted contexts.
+    }
+  }
+
+  function getInitialLang() {
+    const stored = getStoredLang();
+    if (SUPPORTED_LANGS.includes(stored)) {
+      return stored;
+    }
+    const docLang = document.documentElement.dataset.lang;
+    if (SUPPORTED_LANGS.includes(docLang)) {
+      return docLang;
+    }
+    return "zh";
+  }
+
+  function applyStaticI18n() {
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      el.textContent = t(el.getAttribute("data-i18n"));
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+      el.innerHTML = t(el.getAttribute("data-i18n-html"));
+    });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      el.setAttribute("placeholder", t(el.getAttribute("data-i18n-placeholder")));
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria")));
+    });
+  }
+
+  function applyLang(lang, persist) {
+    const normalized = normalizeLang(lang);
+    state.lang = normalized;
+    document.documentElement.dataset.lang = normalized;
+    document.documentElement.lang = normalized === "en" ? "en" : "zh-CN";
+
+    applyStaticI18n();
+
+    const langButton = $("lang-toggle");
+    if (langButton) {
+      langButton.textContent = t("lang.label");
+      langButton.setAttribute("aria-label", t("lang.aria"));
+    }
+    // Re-apply theme so the toggle label follows the new language.
+    applyTheme(normalizeTheme(document.documentElement.dataset.theme), false);
+
+    if (persist) {
+      saveLang(normalized);
+    }
+    return normalized;
+  }
+
+  function refreshDynamicLang() {
+    // "All" option labels live inside data-driven selects, so update them in place.
+    const cityAll = document.querySelector("#city-filter option[value='all']");
+    if (cityAll) {
+      cityAll.textContent = t("select.allCities");
+    }
+    const genreAll = document.querySelector("#genre-filter option[value='all']");
+    if (genreAll) {
+      genreAll.textContent = t("select.allGenres");
+    }
+    if (Array.isArray(state.entries) && state.entries.length) {
+      renderCollections(state.entries);
+      applyFilters();
+    }
+  }
+
+  function toggleLang() {
+    const next = normalizeLang(state.lang) === "en" ? "zh" : "en";
+    applyLang(next, true);
+    refreshDynamicLang();
+    return next;
+  }
+
+  function initLang() {
+    applyLang(getInitialLang(), false);
+    const button = $("lang-toggle");
+    if (button) {
+      button.addEventListener("click", toggleLang);
     }
   }
 
@@ -250,8 +540,8 @@
   }
 
   function initFilters(entries) {
-    buildSelect($("city-filter"), getFilterOptions(entries, "city"), "全部城市");
-    buildSelect($("genre-filter"), getFilterOptions(entries, "genre"), "全部类型");
+    buildSelect($("city-filter"), getFilterOptions(entries, "city"), t("select.allCities"));
+    buildSelect($("genre-filter"), getFilterOptions(entries, "genre"), t("select.allGenres"));
     for (const id of ["city-filter", "genre-filter", "period-filter"]) {
       $(id).addEventListener("change", applyFilters);
     }
@@ -302,10 +592,13 @@
       const coords = getEntryCoordinates(entry);
       const placeLine = entry.place ? `<br><span>${entry.place.name}</span>` : "";
       const marker = L.marker(coords).addTo(state.map);
+      const popupDetailAria = state.lang === "en"
+        ? `View work detail for ${entry.work} ${entry.catalogue}`
+        : `查看 ${entry.work} ${entry.catalogue} 的作品详情`;
       marker.bindPopup(`
         <strong>${entry.city}, ${entry.year}</strong><br>
         ${entry.work} ${entry.catalogue}${placeLine}
-        <br><button type="button" class="popup-detail-link" data-id="${entry.id}" aria-label="查看 ${entry.work} ${entry.catalogue} 的作品详情">查看作品详情</button>
+        <br><button type="button" class="popup-detail-link" data-id="${entry.id}" aria-label="${popupDetailAria}">${t("action.viewDetail")}</button>
       `);
       marker.on("click", () => selectEntry(entry.id, false, false));
       marker.on("popupopen", () => {
@@ -384,8 +677,8 @@
 
       section.innerHTML = `
         <div class="collection-card-head">
-          <h3>${collection.title}</h3>
-          <p>${collection.description}</p>
+          <h3>${collectionTitle(collection)}</h3>
+          <p>${collectionDescription(collection)}</p>
         </div>
         <div class="collection-items">${items}</div>
       `;
@@ -408,7 +701,7 @@
     for (const collection of collections) {
       const link = document.createElement("a");
       link.href = `#collection-${collection.id}`;
-      link.textContent = `${collection.title} (${collection.entries.length})`;
+      link.textContent = `${collectionTitle(collection)} (${collection.entries.length})`;
       nav.appendChild(link);
     }
   }
@@ -435,16 +728,17 @@
       container.hidden = true;
       return;
     }
-    text.textContent = `已选中：${entry.year} · ${entry.work} ${entry.catalogue}`;
+    const selectedPrefix = state.lang === "en" ? "Selected: " : "已选中：";
+    text.textContent = `${selectedPrefix}${entry.year} · ${entry.work} ${entry.catalogue}`;
     container.hidden = false;
   }
 
   function renderDetail(entry) {
     if (!entry) {
-      setText("detail-work", "没有匹配的足迹");
-      setText("detail-meta", "请调整筛选条件。");
-      setText("detail-context", "当前筛选没有结果。");
-      setText("detail-meaning", "当前筛选没有结果。");
+      setText("detail-work", t("detail.noMatchWork"));
+      setText("detail-meta", t("detail.adjustFilters"));
+      setText("detail-context", t("detail.noResult"));
+      setText("detail-meaning", t("detail.noResult"));
       renderDetailCollections(null);
       renderListening(null);
       const mapLink = $("detail-map-link");
@@ -468,7 +762,7 @@
     }
     const source = $("detail-source");
     source.href = entry.source.url;
-    source.textContent = `查看参考来源：${entry.source.label}`;
+    source.textContent = `${t("detail.source")}${sep()}${entry.source.label}`;
     source.hidden = false;
   }
 
@@ -489,7 +783,7 @@
       const item = document.createElement("a");
       item.className = "detail-collection-link";
       item.href = `#collection-${collection.id}`;
-      item.textContent = collection.title;
+      item.textContent = collectionTitle(collection);
       container.appendChild(item);
     }
     container.hidden = false;
@@ -518,10 +812,10 @@
 
     links.replaceChildren();
     if (target) {
-      target.textContent = `播放目标：${entry.listening.target || `${entry.work} ${entry.catalogue}`}`;
+      target.textContent = `${t("listening.targetPrefix")}${entry.listening.target || `${entry.work} ${entry.catalogue}`}`;
     }
     if (note) {
-      note.textContent = entry.listening.note || "听这首作品";
+      note.textContent = entry.listening.note || t("listening.noteFallback");
     }
 
     const actions = [
@@ -543,7 +837,10 @@
       link.target = "_blank";
       link.rel = "noreferrer";
       link.textContent = label;
-      link.setAttribute("aria-label", `在 ${label} 试听 ${listeningTargetText}`);
+      const listenAria = state.lang === "en"
+        ? `Listen to ${listeningTargetText} on ${label}`
+        : `在 ${label} 试听 ${listeningTargetText}`;
+      link.setAttribute("aria-label", listenAria);
       links.appendChild(link);
     }
     container.hidden = false;
@@ -566,7 +863,7 @@
     setText("detail-place-note", place.note);
     const source = $("detail-place-source");
     source.href = place.source.url;
-    source.textContent = `查看地点来源：${place.source.label}`;
+    source.textContent = `${t("detail.placeSource")}${sep()}${place.source.label}`;
     renderPlaceImage(place.image);
     container.classList.toggle("has-image", Boolean(place.image));
     container.hidden = false;
@@ -605,11 +902,11 @@
     };
     img.onerror = () => {
       img.hidden = true;
-      caption.textContent = "地点图片暂时无法加载，可查看图片来源。";
+      caption.textContent = t("place.imageError");
     };
     caption.textContent = image.caption;
     source.href = image.sourceUrl;
-    source.textContent = `图片来源：${image.sourceLabel}`;
+    source.textContent = `${t("detail.imageSource")}${sep()}${image.sourceLabel}`;
     img.src = image.url;
     figure.hidden = false;
   }
@@ -676,7 +973,8 @@
 
   function applyFilters() {
     state.filtered = filterEntries(state.entries, currentFilters()).sort(byYearThenCity);
-    setText("result-count", `${state.filtered.length} 处足迹`);
+    const count = state.filtered.length;
+    setText("result-count", state.lang === "en" ? `${count} ${count === 1 ? "stop" : "stops"}` : `${count} 处足迹`);
     renderMarkers(state.filtered);
     renderTimeline(state.filtered);
     const stillVisible = state.filtered.some((entry) => entry.id === state.selectedId);
@@ -689,6 +987,7 @@
 
   async function init() {
     try {
+      initLang();
       initTheme();
       state.entries = (await loadEntries()).sort(byYearThenCity);
       initFilters(state.entries);
@@ -700,11 +999,11 @@
       applyFilters();
     } catch (error) {
       console.error(error);
-      setText("result-count", "数据未加载");
-      setText("detail-work", "数据加载失败");
-      setText("detail-meta", "请通过本地静态服务器打开本页面，例如 python -m http.server 8000。");
-      setText("detail-context", "浏览器直接打开 file:// 页面时，可能会禁止读取 data/mozart-journey.json。");
-      setText("detail-meaning", "启动本地服务器后再访问 http://localhost:8000 即可完整查看地图与时间线。");
+      setText("result-count", t("error.noData"));
+      setText("detail-work", t("error.loadFailWork"));
+      setText("detail-meta", t("error.loadFailMeta"));
+      setText("detail-context", t("error.loadFailContext"));
+      setText("detail-meaning", t("error.loadFailMeaning"));
       $("map-warning").hidden = false;
     }
   }
@@ -720,6 +1019,10 @@
     applyTheme,
     getInitialTheme,
     toggleTheme,
+    applyLang,
+    getInitialLang,
+    toggleLang,
+    t,
     loadEntries,
     parsePeriod,
   };
