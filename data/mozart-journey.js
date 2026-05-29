@@ -40,10 +40,10 @@ window.MOZART_JOURNEY_DATA = [
     "listening": {
       "target": "Andante in C for Piano, K. 1a",
       "note": "足迹起点：最早期键盘小品，适合作为出生地节点的试听入口。",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Andante%20in%20C%20for%20Piano%20K%201a",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Andante%20in%20C%20K%201a%20Piano",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Andante%20in%20C%20K%201a%20Piano",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Andante%20in%20C%20K%201a%20Piano"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Andante%20in%20C%20for%20Piano%20K.%201a",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Andante%20in%20C%20for%20Piano%20K.%201a",
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Andante%20in%20C%20for%20Piano%20K.%201a",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Andante%20in%20C%20for%20Piano%20K.%201a"
     }
   },
   {
@@ -191,12 +191,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "Mozart Portal 将 K. 136 标为 1772 年初 Salzburg 作品，并说明它是 K. 136-138 三首弦乐作品中的第一首，介于 divertimento、意大利 sinfonia 和室内乐写法之间。"
     },
     "listening": {
-      "target": "Divertimento No. 1 in D major, K. 136, I. Allegro",
+      "target": "Divertimento No. 1 in D major, K. 136",
       "note": "Coffee playlist：取明亮、轻快、启动感强的第一乐章。",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Divertimento%20No.%201%20in%20D%20major%20K%20136",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Divertimento%20No.%201%20in%20D%20major%20K%20136%20Allegro",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Divertimento%20No.%201%20in%20D%20major%20K%20136%20Allegro",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Divertimento%20No.%201%20in%20D%20major%20K%20136%20Allegro"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Divertimento%20No.%201%20in%20D%20major%20K.%20136",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Divertimento%20No.%201%20in%20D%20major%20K.%20136",
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Divertimento%20No.%201%20in%20D%20major%20K.%20136",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Divertimento%20No.%201%20in%20D%20major%20K.%20136"
     }
   },
   {
@@ -321,12 +321,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "Mozart Portal 将 K. 216 放在 1775 年萨尔茨堡小提琴协奏曲系列中；Salzburg.info 支持 Makartplatz 8 作为当时家庭住所语境。页面把它理解为青年莫扎特在宫廷环境里写出的明亮、歌唱性强的独奏作品。"
     },
     "listening": {
-      "target": "Violin Concerto No. 3 in G major, K. 216, II. Adagio",
+      "target": "Violin Concerto No. 3 in G major, K. 216",
       "note": "Coffee / Sleep playlist：明亮又安静的第二乐章。",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Violin%20Concerto%203%20K%20216%20Adagio",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Violin%20Concerto%203%20K%20216%20Adagio",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Violin%20Concerto%203%20K%20216%20Adagio",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%203%20in%20G%20major%20K%20216"
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Violin%20Concerto%20No.%203%20in%20G%20major%20K.%20216",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Violin%20Concerto%20No.%203%20in%20G%20major%20K.%20216",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Violin%20Concerto%20No.%203%20in%20G%20major%20K.%20216",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%203%20in%20G%20major%20K.%20216"
     }
   },
   {
@@ -372,12 +372,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "Mozart Portal 将 K. 218 放在 1775 年小提琴协奏曲创作群中。页面据此把它写成三部曲里更外向、更有仪典感的一首，并继续把地点保守关联到 Makartplatz 8 的萨尔茨堡住所语境。"
     },
     "listening": {
-      "target": "Violin Concerto No. 4 in D major, K. 218, complete concerto",
+      "target": "Violin Concerto No. 4 in D major, K. 218",
       "note": "我喜欢的：外向、明亮的小提琴协奏曲。",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Violin%20Concerto%204%20K%20218",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Violin%20Concerto%204%20K%20218",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Violin%20Concerto%204%20K%20218",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%204%20in%20D%20major%20K%20218"
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Violin%20Concerto%20No.%204%20in%20D%20major%20K.%20218",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Violin%20Concerto%20No.%204%20in%20D%20major%20K.%20218",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Violin%20Concerto%20No.%204%20in%20D%20major%20K.%20218",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%204%20in%20D%20major%20K.%20218"
     }
   },
   {
@@ -424,12 +424,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "Mozart Portal 将 K. 219 标为 Turkish 协奏曲；末乐章的异国化段落和突然转向，使它成为三部曲中最有戏剧性的一首。Salzburg.info 的住所资料用于限定地点语境，而不是断言具体房间。"
     },
     "listening": {
-      "target": "Violin Concerto No. 5 in A major, K. 219, II. Adagio",
+      "target": "Violin Concerto No. 5 in A major, K. 219",
       "note": "Sleep playlist：听第二乐章。",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Violin%20Concerto%205%20K%20219%20Adagio",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Violin%20Concerto%205%20K%20219%20Adagio",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Violin%20Concerto%205%20K%20219%20Adagio",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%205%20in%20A%20major%20K%20219"
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Violin%20Concerto%20No.%205%20in%20A%20major%20K.%20219",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Violin%20Concerto%20No.%205%20in%20A%20major%20K.%20219",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Violin%20Concerto%20No.%205%20in%20A%20major%20K.%20219",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Violin%20Concerto%20No.%205%20in%20A%20major%20K.%20219"
     }
   },
   {
@@ -612,12 +612,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "来源将 K. 299 归入巴黎时期的长笛与竖琴协奏曲；作品听感优雅轻快，但背后是委约、社交和求职网络。"
     },
     "listening": {
-      "target": "Flute and Harp Concerto in C major, K. 299, II. Andantino",
+      "target": "Flute and Harp Concerto in C major, K. 299",
       "note": "Sleep playlist：透明、柔和的第二乐章。",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Flute%20Harp%20Concerto%20K%20299%20Andantino",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Flute%20Harp%20Concerto%20K%20299%20Andantino",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Flute%20Harp%20Concerto%20K%20299%20Andantino",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Flute%20and%20Harp%20Concerto%20in%20C%20major%20K%20299"
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Flute%20and%20Harp%20Concerto%20in%20C%20major%20K.%20299",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Flute%20and%20Harp%20Concerto%20in%20C%20major%20K.%20299",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Flute%20and%20Harp%20Concerto%20in%20C%20major%20K.%20299",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Flute%20and%20Harp%20Concerto%20in%20C%20major%20K.%20299"
     }
   },
   {
@@ -691,12 +691,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "来源显示 K. 310 属于 1778 年巴黎时期，是莫扎特少见的强烈小调键盘奏鸣曲；它可作为求职旅程中内在焦虑的音乐侧影。"
     },
     "listening": {
-      "target": "Piano Sonata No. 8 in A minor, K. 310, complete sonata",
+      "target": "Piano Sonata No. 8 in A minor, K. 310",
       "note": "我喜欢的专辑：巴黎时期的小调键盘奏鸣曲。Apple Music 优先搜 Mitsuko Uchida。",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Sonata%208%20K%20310",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%208%20K%20310%20A%20minor%20Mitsuko%20Uchida",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%208%20K%20310%20A%20minor",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%208%20in%20A%20minor%20K%20310"
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Piano%20Sonata%20No.%208%20in%20A%20minor%20K.%20310",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%20No.%208%20in%20A%20minor%20K.%20310",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%20No.%208%20in%20A%20minor%20K.%20310",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%208%20in%20A%20minor%20K.%20310"
     }
   },
   {
@@ -815,12 +815,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "Mozarteum Köchel 条目给出 Salzburg, 1779-09.1783；Mozart Portal 对 1783 年维也纳或萨尔茨堡的说法更开放。页面因此不写具体公寓，而把它作为萨尔茨堡 / 早期维也纳之间的保守语境节点。"
     },
     "listening": {
-      "target": "Piano Sonata No. 10 in C major, K. 330, complete sonata",
+      "target": "Piano Sonata No. 10 in C major, K. 330",
       "note": "我自己最喜欢弹的：优先打开 YouTube 搜索，Apple Music 优先搜 Mitsuko Uchida。",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Sonata%2010%20K%20330",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%2010%20K%20330%20Mitsuko%20Uchida",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%2010%20K%20330",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2010%20in%20C%20major%20K%20330"
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Piano%20Sonata%20No.%2010%20in%20C%20major%20K.%20330",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%20No.%2010%20in%20C%20major%20K.%20330",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%20No.%2010%20in%20C%20major%20K.%20330",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2010%20in%20C%20major%20K.%20330"
     }
   },
   {
@@ -859,12 +859,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "Mozarteum Köchel 条目将 K. 331 标为 A 大调键盘奏鸣曲，断代为 Salzburg, Vienna, 1779-12.1783；页面据此采用 Salzburg / Vienna 语境，并突出主题变奏与 Alla Turca 的结构特色。"
     },
     "listening": {
-      "target": "Piano Sonata No. 11 in A major, K. 331, III. Alla Turca",
+      "target": "Piano Sonata No. 11 in A major, K. 331",
       "note": "Coffee playlist：播放入口优先指向最容易识别、启动感强的 Alla Turca。Apple Music 优先搜 Mitsuko Uchida。",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2011%20K%20331",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%20No.%2011%20K%20331%20Alla%20Turca%20Mitsuko%20Uchida",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Sonata%20No.%2011%20K%20331%20Alla%20Turca",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%20No.%2011%20K%20331%20Alla%20Turca%20Mitsuko%20Uchida"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2011%20in%20A%20major%20K.%20331",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%20No.%2011%20in%20A%20major%20K.%20331",
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Piano%20Sonata%20No.%2011%20in%20A%20major%20K.%20331",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%20No.%2011%20in%20A%20major%20K.%20331"
     }
   },
   {
@@ -909,12 +909,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "Mozart Portal 将 K. 466 放在 1785 年维也纳钢琴协奏曲高峰期；Wien Geschichte Wiki 的 Mehlgrube 条目提供演出地点语境。页面把它写成公共音乐会环境中高度戏剧化的 D 小调协奏曲。"
     },
     "listening": {
-      "target": "Piano Concerto No. 20 in D minor, K. 466, complete concerto",
+      "target": "Piano Concerto No. 20 in D minor, K. 466",
       "note": "压力大的时候会听：D 小调张力很强，适合完整听，也可从第一乐章进入。",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2020%20in%20D%20minor%20K%20466",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Concerto%2020%20K%20466%20D%20minor%20Mitsuko%20Uchida",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Concerto%2020%20K%20466",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Concerto%2020%20K%20466%20D%20minor"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2020%20in%20D%20minor%20K.%20466",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Concerto%20No.%2020%20in%20D%20minor%20K.%20466",
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Piano%20Concerto%20No.%2020%20in%20D%20minor%20K.%20466",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Concerto%20No.%2020%20in%20D%20minor%20K.%20466"
     }
   },
   {
@@ -960,12 +960,12 @@ window.MOZART_JOURNEY_DATA = [
       "sleep-playlist"
     ],
     "listening": {
-      "target": "Piano Concerto No. 21 in C major, K. 467, II. Andante",
+      "target": "Piano Concerto No. 21 in C major, K. 467",
       "note": "听第二乐章：放松、飞机上会听。Apple Music 优先搜 Mitsuko Uchida。",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Concerto%2021%20K%20467%20Andante",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Concerto%2021%20K%20467%20Andante%20Mitsuko%20Uchida",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Concerto%2021%20K%20467%20Andante",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2021%20in%20C%20major%20K%20467"
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Piano%20Concerto%20No.%2021%20in%20C%20major%20K.%20467",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Concerto%20No.%2021%20in%20C%20major%20K.%20467",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Concerto%20No.%2021%20in%20C%20major%20K.%20467",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2021%20in%20C%20major%20K.%20467"
     }
   },
   {
@@ -1010,12 +1010,12 @@ window.MOZART_JOURNEY_DATA = [
       "personal-favorites"
     ],
     "listening": {
-      "target": "Piano Concerto No. 23 in A major, K. 488, II. Adagio",
+      "target": "Piano Concerto No. 23 in A major, K. 488",
       "note": "听第二乐章：你记得的舞蹈 kiss 听感。Apple Music 优先搜 Mitsuko Uchida。",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Concerto%2023%20K%20488%20Adagio",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Concerto%2023%20K%20488%20Adagio%20Mitsuko%20Uchida",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Concerto%2023%20K%20488%20Adagio",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2023%20in%20A%20major%20K%20488"
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Piano%20Concerto%20No.%2023%20in%20A%20major%20K.%20488",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Concerto%20No.%2023%20in%20A%20major%20K.%20488",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Concerto%20No.%2023%20in%20A%20major%20K.%20488",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Concerto%20No.%2023%20in%20A%20major%20K.%20488"
     }
   },
   {
@@ -1096,12 +1096,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "来源说明《费加罗的婚礼》改编自 Beaumarchais 戏剧，由 Da Ponte 写作意大利语脚本；作品以喜剧外壳处理阶级、欲望和权力关系。"
     },
     "listening": {
-      "target": "Le nozze di Figaro, K. 492, Sinfonia / Overture",
+      "target": "Sinfonia / Overture from Le nozze di Figaro, K. 492",
       "note": "Coffee playlist：播放入口对应 Sinfonia / Overture。",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Le%20Nozze%20di%20Figaro%20Overture%20K%20492",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Le%20Nozze%20di%20Figaro%20Overture%20K%20492",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Le%20Nozze%20di%20Figaro%20Overture%20K%20492",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Le%20nozze%20di%20Figaro%20K%20492"
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Sinfonia%20/%20Overture%20from%20Le%20nozze%20di%20Figaro%20K.%20492",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Sinfonia%20/%20Overture%20from%20Le%20nozze%20di%20Figaro%20K.%20492",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Sinfonia%20/%20Overture%20from%20Le%20nozze%20di%20Figaro%20K.%20492",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Sinfonia%20/%20Overture%20from%20Le%20nozze%20di%20Figaro%20K.%20492"
     },
     "collections": [
       "coffee-playlist"
@@ -1188,12 +1188,12 @@ window.MOZART_JOURNEY_DATA = [
       "personal-favorites"
     ],
     "listening": {
-      "target": "Eine kleine Nachtmusik, K. 525, I. Allegro",
+      "target": "Eine kleine Nachtmusik, K. 525",
       "note": "我喜欢的：播放入口先指向最熟悉、最有启动感的第一乐章。",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Eine%20kleine%20Nachtmusik%20K%20525",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Eine%20kleine%20Nachtmusik%20K%20525%20I.%20Allegro",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Eine%20kleine%20Nachtmusik%20K%20525%20I.%20Allegro",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Eine%20kleine%20Nachtmusik%20K%20525%20I.%20Allegro"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Eine%20kleine%20Nachtmusik%20K.%20525",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Eine%20kleine%20Nachtmusik%20K.%20525",
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Eine%20kleine%20Nachtmusik%20K.%20525",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Eine%20kleine%20Nachtmusik%20K.%20525"
     }
   },
   {
@@ -1278,12 +1278,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "Mozart Portal 将 K. 545 标为 1788 年维也纳作品；页面不推断具体公寓，只用维也纳晚期作品目录和后来的 facile / easy sonata 接受语境来解释它。"
     },
     "listening": {
-      "target": "Piano Sonata No. 16 in C major, K. 545, II. Andante",
+      "target": "Piano Sonata No. 16 in C major, K. 545",
       "note": "我自己最喜欢弹的；Sleep playlist 听第二乐章 Andante。Apple Music 优先搜 Mitsuko Uchida。",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Mitsuko%20Uchida%20Piano%20Sonata%2016%20K%20545%20Andante",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%2016%20K%20545%20Andante%20Mitsuko%20Uchida",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%2016%20K%20545%20Andante",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2016%20in%20C%20major%20K%20545"
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Piano%20Sonata%20No.%2016%20in%20C%20major%20K.%20545",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%20No.%2016%20in%20C%20major%20K.%20545",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%20No.%2016%20in%20C%20major%20K.%20545",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%2016%20in%20C%20major%20K.%20545"
     }
   },
   {
@@ -1370,12 +1370,12 @@ window.MOZART_JOURNEY_DATA = [
       "summary": "Mozart Portal 说明 K. 551 于 1788 年 8 月 10 日在维也纳完成，是莫扎特最后一部交响曲；“Jupiter”是后世称呼，作品以明亮 C 大调、宏大规模和终乐章复调技艺著称。"
     },
     "listening": {
-      "target": "Symphony No. 41 in C major, K. 551, IV. Molto allegro",
+      "target": "Symphony No. 41 in C major, K. 551",
       "note": "Coffee playlist：建议从终乐章进入，明亮、有推进力，也最能听到 Jupiter 的结构兴奋。",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Symphony%20No.%2041%20K%20551%20Jupiter",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Symphony%20No.%2041%20K%20551%20Jupiter%20Molto%20allegro",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Symphony%20No.%2041%20K%20551%20Jupiter%20Molto%20allegro",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Symphony%20No.%2041%20K%20551%20Jupiter%20Molto%20allegro"
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Symphony%20No.%2041%20in%20C%20major%20K.%20551",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Symphony%20No.%2041%20in%20C%20major%20K.%20551",
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Symphony%20No.%2041%20in%20C%20major%20K.%20551",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Symphony%20No.%2041%20in%20C%20major%20K.%20551"
     }
   },
   {
@@ -1538,12 +1538,12 @@ window.MOZART_JOURNEY_DATA = [
       "sleep-playlist"
     ],
     "listening": {
-      "target": "Clarinet Concerto in A major, K. 622, II. Adagio",
+      "target": "Clarinet Concerto in A major, K. 622",
       "note": "听第二乐章：英国下班时听的黄昏曲。",
-      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Clarinet%20Concerto%20K%20622%20Adagio",
-      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Clarinet%20Concerto%20K%20622%20Adagio",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Clarinet%20Concerto%20K%20622%20Adagio",
-      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Clarinet%20Concerto%20in%20A%20major%20K%20622"
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Clarinet%20Concerto%20in%20A%20major%20K.%20622",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Clarinet%20Concerto%20in%20A%20major%20K.%20622",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Clarinet%20Concerto%20in%20A%20major%20K.%20622",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Clarinet%20Concerto%20in%20A%20major%20K.%20622"
     }
   },
   {
