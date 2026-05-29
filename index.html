@@ -3,21 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>莫扎特足迹互动地图</title>
+    <title data-i18n="doc.title">莫扎特足迹互动地图</title>
     <script>
-      // Pre-init theme before render to avoid flash of wrong theme/label
+      // Pre-init theme + language before render to avoid a flash of the wrong theme/label
       (function () {
+        var lang = "zh";
+        var theme = "light";
         try {
-          var stored = window.localStorage && window.localStorage.getItem("mozart-journey-theme");
-          var theme = (stored === "dark" || stored === "light")
-            ? stored
+          var storedLang = window.localStorage && window.localStorage.getItem("mozart-journey-lang");
+          if (storedLang === "en" || storedLang === "zh") {
+            lang = storedLang;
+          }
+          var storedTheme = window.localStorage && window.localStorage.getItem("mozart-journey-theme");
+          theme = (storedTheme === "dark" || storedTheme === "light")
+            ? storedTheme
             : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-          document.documentElement.dataset.theme = theme;
-          document.documentElement.dataset.initialThemeLabel = theme === "dark" ? "白天" : "黑夜";
         } catch (e) {
-          document.documentElement.dataset.theme = "light";
-          document.documentElement.dataset.initialThemeLabel = "黑夜";
+          /* localStorage may be unavailable for file:// or privacy-restricted contexts */
         }
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.dataset.lang = lang;
+        document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+        var themeLabels = { zh: { dark: "白天", light: "黑夜" }, en: { dark: "Light", light: "Dark" } };
+        document.documentElement.dataset.initialThemeLabel = themeLabels[lang][theme === "dark" ? "dark" : "light"];
+        document.documentElement.dataset.initialLangLabel = lang === "en" ? "中文" : "EN";
       })();
     </script>
     <link rel="preconnect" href="https://unpkg.com">
@@ -28,88 +37,93 @@
   </head>
   <body>
     <header class="hero">
-      <nav class="topbar" aria-label="页面导航">
+      <nav class="topbar" aria-label="页面导航" data-i18n-aria="nav.aria">
         <a href="#map" class="brand">Mozart Journey</a>
         <div class="nav-links">
-          <a href="#collections">收藏</a>
-          <a href="#timeline">时间线</a>
-          <a href="#detail">作品详情</a>
-          <a href="#sources">来源</a>
+          <a href="#collections" data-i18n="nav.collections">收藏</a>
+          <a href="#timeline" data-i18n="nav.timeline">时间线</a>
+          <a href="#detail" data-i18n="nav.detail">作品详情</a>
+          <a href="#sources" data-i18n="nav.sources">来源</a>
+          <button id="lang-toggle" class="lang-toggle" type="button" aria-label="切换语言"></button>
           <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="切换显示模式"></button>
         </div>
       </nav>
       <script>
-        // Fill the toggle label immediately so dark-mode visitors don't see a flash
+        // Fill the toggle labels immediately so dark-mode / English visitors don't see a flash
         (function () {
-          var btn = document.getElementById("theme-toggle");
-          if (!btn) return;
           var theme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
-          btn.textContent = document.documentElement.dataset.initialThemeLabel || (theme === "dark" ? "白天" : "黑夜");
-          btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
-          btn.setAttribute("aria-label", theme === "dark" ? "切换到白天模式" : "切换到黑夜模式");
+          var themeBtn = document.getElementById("theme-toggle");
+          if (themeBtn) {
+            themeBtn.textContent = document.documentElement.dataset.initialThemeLabel || (theme === "dark" ? "白天" : "黑夜");
+            themeBtn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+          }
+          var langBtn = document.getElementById("lang-toggle");
+          if (langBtn) {
+            langBtn.textContent = document.documentElement.dataset.initialLangLabel || "EN";
+          }
         })();
       </script>
       <div class="hero-content">
-        <p class="eyebrow">1756-1791 · 欧洲城市与作品</p>
-        <h1>莫扎特的足迹</h1>
-        <p class="hero-copy">沿着地图与年份时间线，查看莫扎特在伦敦、维也纳、米兰、萨尔茨堡、巴黎、慕尼黑与布拉格等地留下的代表作品。</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">1756-1791 · 欧洲城市与作品</p>
+        <h1 data-i18n="hero.title">莫扎特的足迹</h1>
+        <p class="hero-copy" data-i18n="hero.copy">沿着地图与年份时间线，查看莫扎特在伦敦、维也纳、米兰、萨尔茨堡、巴黎、慕尼黑与布拉格等地留下的代表作品。</p>
       </div>
     </header>
 
     <main>
       <section class="controls-section" aria-labelledby="filters-title">
         <div>
-          <p class="section-kicker">筛选</p>
-          <h2 id="filters-title">按城市、时期和类型探索</h2>
+          <p class="section-kicker" data-i18n="filters.kicker">筛选</p>
+          <h2 id="filters-title" data-i18n="filters.title">按城市、时期和类型探索</h2>
         </div>
-        <form class="filters" aria-label="足迹筛选">
+        <form class="filters" aria-label="足迹筛选" data-i18n-aria="filters.formAria">
           <label>
-            搜索
-            <input id="search-filter" class="search-input" type="search" placeholder="K. 488 / 协奏曲 / Vienna">
+            <span data-i18n="filter.search">搜索</span>
+            <input id="search-filter" class="search-input" type="search" placeholder="K. 488 / 协奏曲 / Vienna" data-i18n-placeholder="filter.searchPlaceholder">
           </label>
           <label>
-            城市
+            <span data-i18n="filter.city">城市</span>
             <select id="city-filter"></select>
           </label>
           <label>
-            时期
+            <span data-i18n="filter.period">时期</span>
             <select id="period-filter">
-              <option value="all">全部时期</option>
-              <option value="1756-1772">1756-1772 童年与旅行</option>
-              <option value="1773-1781">1773-1781 萨尔茨堡与求职</option>
-              <option value="1782-1791">1782-1791 维也纳成熟期</option>
+              <option value="all" data-i18n="period.all">全部时期</option>
+              <option value="1756-1772" data-i18n="period.p1">1756-1772 童年与旅行</option>
+              <option value="1773-1781" data-i18n="period.p2">1773-1781 萨尔茨堡与求职</option>
+              <option value="1782-1791" data-i18n="period.p3">1782-1791 维也纳成熟期</option>
             </select>
           </label>
           <label>
-            类型
+            <span data-i18n="filter.genre">类型</span>
             <select id="genre-filter"></select>
           </label>
         </form>
       </section>
 
-      <section class="explorer" aria-label="莫扎特足迹地图与时间线">
+      <section class="explorer" aria-label="莫扎特足迹地图与时间线" data-i18n-aria="explorer.aria">
         <div class="map-panel">
           <div class="panel-header">
             <div>
-              <p class="section-kicker">地图</p>
-              <h2 id="map-title">欧洲足迹</h2>
+              <p class="section-kicker" data-i18n="map.kicker">地图</p>
+              <h2 id="map-title" data-i18n="map.title">欧洲足迹</h2>
             </div>
             <p id="result-count" class="result-count" aria-live="polite"></p>
           </div>
-          <div id="map" role="application" aria-label="莫扎特旅行城市互动地图"></div>
-          <p id="map-warning" class="map-warning" hidden>地图底图需要联网加载；下方时间线和作品详情仍可正常阅读。</p>
+          <div id="map" role="application" aria-label="莫扎特旅行城市互动地图" data-i18n-aria="map.appAria"></div>
+          <p id="map-warning" class="map-warning" hidden data-i18n="map.warning">地图底图需要联网加载；下方时间线和作品详情仍可正常阅读。</p>
         </div>
 
         <aside class="timeline-panel" id="timeline" aria-labelledby="timeline-title">
           <div class="panel-header compact">
             <div>
-              <p class="section-kicker">时间线</p>
-              <h2 id="timeline-title">年份与作品</h2>
+              <p class="section-kicker" data-i18n="timeline.kicker">时间线</p>
+              <h2 id="timeline-title" data-i18n="timeline.title">年份与作品</h2>
             </div>
           </div>
           <div id="timeline-selection" class="timeline-selection" hidden>
             <span id="timeline-selection-text"></span>
-            <button id="timeline-detail-link" type="button">查看作品详情</button>
+            <button id="timeline-detail-link" type="button" data-i18n="action.viewDetail">查看作品详情</button>
           </div>
           <div id="timeline-list" class="timeline-list"></div>
         </aside>
@@ -117,9 +131,9 @@
 
       <section class="detail-section" id="detail" aria-live="polite">
         <div class="detail-main">
-          <p class="section-kicker">作品详情</p>
-          <h2 id="detail-work">选择一个地点或年份</h2>
-          <p id="detail-meta" class="detail-meta">点击地图点位或时间线节点后，这里会显示作品背景与意义。</p>
+          <p class="section-kicker" data-i18n="detail.kicker">作品详情</p>
+          <h2 id="detail-work" data-i18n="detail.workPlaceholder">选择一个地点或年份</h2>
+          <p id="detail-meta" class="detail-meta" data-i18n="detail.metaPlaceholder">点击地图点位或时间线节点后，这里会显示作品背景与意义。</p>
           <div id="detail-collections" class="detail-collections" hidden></div>
           <div id="detail-listening" class="detail-listening" hidden>
             <strong id="detail-listening-target" class="listening-target"></strong>
@@ -131,51 +145,51 @@
             <strong id="detail-place-name"></strong>
             <span id="detail-place-address"></span>
             <p id="detail-place-note"></p>
-            <a id="detail-place-source" href="#" target="_blank" rel="noreferrer">查看地点来源</a>
+            <a id="detail-place-source" href="#" target="_blank" rel="noreferrer" data-i18n="detail.placeSource">查看地点来源</a>
             <figure id="detail-place-image" class="place-image" hidden>
               <img id="detail-place-image-img" alt="" loading="lazy">
               <figcaption>
                 <span id="detail-place-image-caption"></span>
-                <a id="detail-place-image-source" href="#" target="_blank" rel="noreferrer">图片来源</a>
+                <a id="detail-place-image-source" href="#" target="_blank" rel="noreferrer" data-i18n="detail.imageSource">图片来源</a>
               </figcaption>
             </figure>
           </div>
           <div class="detail-grid">
             <article>
-              <h3>创作背景</h3>
-              <p id="detail-context">等待选择。</p>
+              <h3 data-i18n="detail.context">创作背景</h3>
+              <p id="detail-context" data-i18n="detail.waiting">等待选择。</p>
             </article>
             <article>
-              <h3>含义</h3>
-              <p id="detail-meaning">等待选择。</p>
+              <h3 data-i18n="detail.meaning">含义</h3>
+              <p id="detail-meaning" data-i18n="detail.waiting">等待选择。</p>
             </article>
           </div>
           <div class="detail-actions">
-            <button id="detail-map-link" class="detail-map-link" type="button" hidden>查看地图位置</button>
-            <a id="detail-source" class="source-link" href="#" target="_blank" rel="noreferrer" hidden>查看参考来源</a>
+            <button id="detail-map-link" class="detail-map-link" type="button" hidden data-i18n="detail.mapLink">查看地图位置</button>
+            <a id="detail-source" class="source-link" href="#" target="_blank" rel="noreferrer" hidden data-i18n="detail.source">查看参考来源</a>
           </div>
         </div>
       </section>
 
       <section class="collections-section" id="collections" aria-labelledby="collections-title">
         <div class="section-heading">
-          <p class="section-kicker">我的收藏</p>
-          <h2 id="collections-title">按你的听感场景整理</h2>
+          <p class="section-kicker" data-i18n="collections.kicker">我的收藏</p>
+          <h2 id="collections-title" data-i18n="collections.title">按你的听感场景整理</h2>
         </div>
-        <nav id="collection-nav" class="collection-nav" aria-label="收藏分组快速导航"></nav>
+        <nav id="collection-nav" class="collection-nav" aria-label="收藏分组快速导航" data-i18n-aria="collections.navAria"></nav>
         <div id="collection-list" class="collection-list"></div>
       </section>
 
       <section class="sources-section" id="sources" aria-labelledby="sources-title">
-        <p class="section-kicker">资料说明</p>
-        <h2 id="sources-title">保守表述，便于后续扩展</h2>
-        <p>第一版选取少量关键节点，来源字段保存在 JSON 数据中。对委约、首演或用途不确定的作品，页面采用“通常认为”“具体场合不清楚”等保守表达。</p>
+        <p class="section-kicker" data-i18n="sources.kicker">资料说明</p>
+        <h2 id="sources-title" data-i18n="sources.title">保守表述，便于后续扩展</h2>
+        <p data-i18n="sources.intro">第一版选取少量关键节点，来源字段保存在 JSON 数据中。对委约、首演或用途不确定的作品，页面采用“通常认为”“具体场合不清楚”等保守表达。</p>
         <div id="source-list" class="source-list"></div>
       </section>
     </main>
 
     <footer>
-      <p>静态网页原型 · Leaflet + OpenStreetMap · 内容可在 <code>data/mozart-journey.json</code> 中维护</p>
+      <p data-i18n-html="footer.text">静态网页原型 · Leaflet + OpenStreetMap · 内容可在 <code>data/mozart-journey.json</code> 中维护</p>
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>

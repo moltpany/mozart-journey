@@ -93,7 +93,8 @@ a {
   color: rgba(255, 248, 234, 0.86);
 }
 
-.theme-toggle {
+.theme-toggle,
+.lang-toggle {
   min-width: 54px;
   min-height: 32px;
   border: 1px solid rgba(255, 248, 234, 0.36);
@@ -107,7 +108,9 @@ a {
 }
 
 .theme-toggle:hover,
-.theme-toggle:focus-visible {
+.theme-toggle:focus-visible,
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
   border-color: rgba(255, 248, 234, 0.7);
   background: rgba(255, 248, 234, 0.18);
   outline: none;
