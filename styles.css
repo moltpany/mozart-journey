@@ -74,10 +74,52 @@ a {
   border-bottom: 1px solid rgba(255, 248, 234, 0.22);
 }
 
+.brand-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.back-home {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: rgba(255, 248, 234, 0.6);
+  transition: color 0.15s;
+}
+
+.back-home:hover,
+.back-home:focus-visible {
+  color: rgba(255, 248, 234, 0.95);
+  outline: none;
+}
+
 .brand {
   font-weight: 800;
   text-decoration: none;
   letter-spacing: 0.04em;
+}
+
+.clear-filters {
+  align-self: flex-end;
+  min-height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 12px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.clear-filters:hover,
+.clear-filters:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  outline: none;
 }
 
 .nav-links {

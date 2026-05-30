@@ -38,7 +38,10 @@
   <body>
     <header class="hero">
       <nav class="topbar" aria-label="页面导航" data-i18n-aria="nav.aria">
-        <a href="#map" class="brand">Mozart Journey</a>
+        <div class="brand-group">
+          <a href="https://moltpany.github.io/" class="back-home" data-i18n="nav.backHome" aria-label="返回 Moltpany 主站" data-i18n-aria="nav.backHomeAria">← Moltpany</a>
+          <a href="#map" class="brand">Mozart Journey</a>
+        </div>
         <div class="nav-links">
           <a href="#collections" data-i18n="nav.collections">收藏</a>
           <a href="#timeline" data-i18n="nav.timeline">时间线</a>
@@ -77,6 +80,7 @@
           <h2 id="filters-title" data-i18n="filters.title">按城市、时期和类型探索</h2>
         </div>
         <form class="filters" aria-label="足迹筛选" data-i18n-aria="filters.formAria">
+          <button id="clear-filters" class="clear-filters" type="button" hidden data-i18n="filter.clearAll">清除筛选</button>
           <label>
             <span data-i18n="filter.search">搜索</span>
             <input id="search-filter" class="search-input" type="search" placeholder="K. 488 / 协奏曲 / Vienna" data-i18n-placeholder="filter.searchPlaceholder">

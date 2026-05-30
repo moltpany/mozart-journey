@@ -76,6 +76,8 @@
     zh: {
       "doc.title": "莫扎特足迹互动地图",
       "nav.aria": "页面导航",
+      "nav.backHome": "← Moltpany",
+      "nav.backHomeAria": "返回 Moltpany 主站",
       "nav.collections": "收藏",
       "nav.timeline": "时间线",
       "nav.detail": "作品详情",
@@ -86,6 +88,7 @@
       "filters.kicker": "筛选",
       "filters.title": "按城市、时期和类型探索",
       "filters.formAria": "足迹筛选",
+      "filter.clearAll": "清除筛选",
       "filter.search": "搜索",
       "filter.searchPlaceholder": "K. 488 / 协奏曲 / Vienna",
       "filter.city": "城市",
@@ -143,6 +146,8 @@
     en: {
       "doc.title": "Mozart Journey · Interactive Map",
       "nav.aria": "Page navigation",
+      "nav.backHome": "← Moltpany",
+      "nav.backHomeAria": "Back to Moltpany",
       "nav.collections": "Collections",
       "nav.timeline": "Timeline",
       "nav.detail": "Work detail",
@@ -153,6 +158,7 @@
       "filters.kicker": "Filter",
       "filters.title": "Explore by city, period and genre",
       "filters.formAria": "Journey filters",
+      "filter.clearAll": "Clear filters",
       "filter.search": "Search",
       "filter.searchPlaceholder": "K. 488 / Concerto / Vienna",
       "filter.city": "City",
@@ -539,6 +545,34 @@
     };
   }
 
+  function isFiltered(filters) {
+    return (
+      (filters.city && filters.city !== "all") ||
+      (filters.genre && filters.genre !== "all") ||
+      (filters.period && filters.period !== "all") ||
+      filters.query.trim() !== ""
+    );
+  }
+
+  function updateClearButton(filters) {
+    const btn = $("clear-filters");
+    if (btn) {
+      btn.hidden = !isFiltered(filters);
+    }
+  }
+
+  function clearFilters() {
+    const cityFilter = $("city-filter");
+    const genreFilter = $("genre-filter");
+    const periodFilter = $("period-filter");
+    const searchFilter = $("search-filter");
+    if (cityFilter) cityFilter.value = "all";
+    if (genreFilter) genreFilter.value = "all";
+    if (periodFilter) periodFilter.value = "all";
+    if (searchFilter) searchFilter.value = "";
+    applyFilters();
+  }
+
   function initFilters(entries) {
     buildSelect($("city-filter"), getFilterOptions(entries, "city"), t("select.allCities"));
     buildSelect($("genre-filter"), getFilterOptions(entries, "genre"), t("select.allGenres"));
@@ -548,6 +582,10 @@
     const search = $("search-filter");
     if (search) {
       search.addEventListener("input", applyFilters);
+    }
+    const clearBtn = $("clear-filters");
+    if (clearBtn) {
+      clearBtn.addEventListener("click", clearFilters);
     }
   }
 
@@ -972,7 +1010,9 @@
   }
 
   function applyFilters() {
-    state.filtered = filterEntries(state.entries, currentFilters()).sort(byYearThenCity);
+    const filters = currentFilters();
+    updateClearButton(filters);
+    state.filtered = filterEntries(state.entries, filters).sort(byYearThenCity);
     const count = state.filtered.length;
     setText("result-count", state.lang === "en" ? `${count} ${count === 1 ? "stop" : "stops"}` : `${count} 处足迹`);
     renderMarkers(state.filtered);
