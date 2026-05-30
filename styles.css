@@ -972,3 +972,23 @@ html[data-theme="dark"] .leaflet-bar a:focus {
     grid-template-columns: 58px 1fr;
   }
 }
+
+/* Marker clustering — restyle the plugin's default icons to the site palette */
+.marker-cluster {
+  background: rgba(138, 47, 42, 0.25);
+}
+
+.marker-cluster div {
+  background: var(--accent);
+  color: #fff8ea;
+  font-weight: 700;
+}
+
+html[data-theme="dark"] .marker-cluster {
+  background: rgba(215, 122, 101, 0.28);
+}
+
+html[data-theme="dark"] .marker-cluster div {
+  background: var(--accent);
+  color: #261f1b;
+}

@@ -220,6 +220,7 @@
     selectedId: null,
     map: null,
     markers: new Map(),
+    clusterGroup: null,
     lang: "zh",
   };
 
@@ -610,6 +611,17 @@
       warning.hidden = false;
     });
     tiles.addTo(state.map);
+
+    // Cluster overlapping markers (e.g. several works in the same city).
+    // Falls back gracefully to plain markers if the plugin failed to load.
+    if (typeof L.markerClusterGroup === "function") {
+      state.clusterGroup = L.markerClusterGroup({
+        maxClusterRadius: 45,
+        showCoverageOnHover: false,
+        spiderfyOnMaxZoom: true,
+      });
+      state.map.addLayer(state.clusterGroup);
+    }
   }
 
   function renderMarkers(entries) {
@@ -618,9 +630,13 @@
     }
 
     state.map.closePopup();
-    for (const marker of state.markers.values()) {
-      marker.closePopup();
-      state.map.removeLayer(marker);
+    if (state.clusterGroup) {
+      state.clusterGroup.clearLayers();
+    } else {
+      for (const marker of state.markers.values()) {
+        marker.closePopup();
+        state.map.removeLayer(marker);
+      }
     }
     state.map.closePopup();
     document.querySelectorAll(".leaflet-popup").forEach((popup) => popup.remove());
@@ -629,7 +645,12 @@
     for (const entry of entries) {
       const coords = getEntryCoordinates(entry);
       const placeLine = entry.place ? `<br><span>${entry.place.name}</span>` : "";
-      const marker = L.marker(coords).addTo(state.map);
+      const marker = L.marker(coords);
+      if (state.clusterGroup) {
+        state.clusterGroup.addLayer(marker);
+      } else {
+        marker.addTo(state.map);
+      }
       const popupDetailAria = state.lang === "en"
         ? `View work detail for ${entry.work} ${entry.catalogue}`
         : `查看 ${entry.work} ${entry.catalogue} 的作品详情`;
@@ -954,11 +975,19 @@
     if (scrollToMap && mapElement && typeof mapElement.scrollIntoView === "function") {
       mapElement.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-    if (state.map) {
-      state.map.setView(getEntryCoordinates(entry), Math.max(state.map.getZoom(), 6), { animate: true });
-      if (state.markers.has(entry.id)) {
-        state.markers.get(entry.id).openPopup();
-      }
+    if (!state.map) {
+      return;
+    }
+    const marker = state.markers.get(entry.id);
+    // When clustered, expand the enclosing cluster before opening the popup,
+    // otherwise openPopup() targets a marker hidden inside a cluster icon.
+    if (state.clusterGroup && marker && typeof state.clusterGroup.zoomToShowLayer === "function") {
+      state.clusterGroup.zoomToShowLayer(marker, () => marker.openPopup());
+      return;
+    }
+    state.map.setView(getEntryCoordinates(entry), Math.max(state.map.getZoom(), 6), { animate: true });
+    if (marker) {
+      marker.openPopup();
     }
   }
 

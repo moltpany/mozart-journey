@@ -29,7 +29,7 @@ Mozart Journey 不只是一件作品，它也是 [Moltpany](https://moltpany.git
 ## 技术栈
 
 - 纯静态站点，没有构建步骤
-- [Leaflet 1.9](https://leafletjs.com/) + [OpenStreetMap](https://www.openstreetmap.org/) 提供地图
+- [Leaflet 1.9](https://leafletjs.com/) + [OpenStreetMap](https://www.openstreetmap.org/) 提供地图，[Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) 聚合同城重叠点位
 - 数据维护在 `data/mozart-journey.json`，同步一份 `data/mozart-journey.js`（写成 `window.MOZART_JOURNEY_DATA = ...`），以便用 `file://` 直接打开本地预览时也能读到数据
 - 主题切换通过 `html[data-theme]` 与 `localStorage` 持久化（key: `mozart-journey-theme`）
 
