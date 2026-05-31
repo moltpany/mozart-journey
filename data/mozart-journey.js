@@ -1208,7 +1208,8 @@ window.MOZART_JOURNEY_DATA = [
       "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Sinfonia%20/%20Overture%20from%20Le%20nozze%20di%20Figaro%20K.%20492"
     },
     "collections": [
-      "coffee-playlist"
+      "coffee-playlist",
+      "love"
     ]
   },
   {
@@ -1598,7 +1599,10 @@ window.MOZART_JOURNEY_DATA = [
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Cosi%20fan%20tutte%2C%20ossia%20La%20scuola%20degli%20amanti%20K.%20588",
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Cosi%20fan%20tutte%2C%20ossia%20La%20scuola%20degli%20amanti%20K.%20588",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Cosi%20fan%20tutte%2C%20ossia%20La%20scuola%20degli%20amanti%20K.%20588"
-    }
+    },
+    "collections": [
+      "love"
+    ]
   },
   {
     "id": "vienna-1791-magic-flute",
@@ -1645,7 +1649,10 @@ window.MOZART_JOURNEY_DATA = [
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Die%20Zauberflote%20K.%20620",
       "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Die%20Zauberflote%20K.%20620",
       "spotifySearch": "https://open.spotify.com/search/Mozart%20Die%20Zauberflote%20K.%20620"
-    }
+    },
+    "collections": [
+      "love"
+    ]
   },
   {
     "id": "vienna-1791-clarinet-concerto",

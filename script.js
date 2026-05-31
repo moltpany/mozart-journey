@@ -22,6 +22,13 @@
       descriptionEn: "Two minor-key works: not easy comfort, but tension organised into clear structure.",
     },
     {
+      id: "love",
+      title: "关于爱情",
+      description: "莫扎特歌剧里的爱情：《费加罗》里的嫉妒与宽恕，《魔笛》终于配对的 Papageno，《女人心》对忠诚的试探。",
+      titleEn: "About Love",
+      descriptionEn: "Love in Mozart's operas: jealousy and forgiveness in Figaro, Papageno finally finding his match in The Magic Flute, and a test of fidelity in Così fan tutte.",
+    },
+    {
       id: "job-search",
       title: "Mozart 找工作",
       description: "曼海姆、巴黎和早期维也纳阶段的作品，听见才华、委约、求职和不确定性并行。",
