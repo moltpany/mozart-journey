@@ -57,6 +57,7 @@
     selectedId: null,
     map: null,
     markers: new Map(),
+    markerByEntry: new Map(),
   };
 
   function parsePeriod(period) {
@@ -284,6 +285,25 @@
     tiles.addTo(state.map);
   }
 
+  function buildCityPopup(group) {
+    const items = group.entries.map((entry) => {
+      const placeLine = entry.place && entry.place.name
+        ? `<span class="popup-item-place">${entry.place.name}</span>`
+        : "";
+      return `
+        <button type="button" class="popup-detail-link popup-item" data-id="${entry.id}" aria-label="查看 ${entry.work} ${entry.catalogue} 的作品详情">
+          <span class="popup-item-work">${entry.work} ${entry.catalogue}</span>
+          <span class="popup-item-year">${entry.year}</span>${placeLine}
+        </button>`;
+    }).join("");
+    const countLine = group.entries.length > 1
+      ? `<span class="popup-count">${group.entries.length} 部作品</span>`
+      : "";
+    return `
+      <strong>${group.city}</strong>${countLine}
+      <div class="popup-items">${items}</div>`;
+  }
+
   function renderMarkers(entries) {
     if (!state.map) {
       return;
@@ -297,32 +317,44 @@
     state.map.closePopup();
     document.querySelectorAll(".leaflet-popup").forEach((popup) => popup.remove());
     state.markers.clear();
+    state.markerByEntry = new Map();
 
+    // Group entries that share the same coordinates into one city marker, so
+    // works in the same place stay individually reachable instead of stacking.
+    const groups = new Map();
     for (const entry of entries) {
       const coords = getEntryCoordinates(entry);
-      const placeLine = entry.place ? `<br><span>${entry.place.name}</span>` : "";
-      const marker = L.marker(coords).addTo(state.map);
-      marker.bindPopup(`
-        <strong>${entry.city}, ${entry.year}</strong><br>
-        ${entry.work} ${entry.catalogue}${placeLine}
-        <br><button type="button" class="popup-detail-link" data-id="${entry.id}" aria-label="查看 ${entry.work} ${entry.catalogue} 的作品详情">查看作品详情</button>
-      `);
-      marker.on("click", () => selectEntry(entry.id, false, false));
-      marker.on("popupopen", () => {
-        const popup = marker.getPopup && marker.getPopup().getElement ? marker.getPopup().getElement() : null;
-        const detailLink = popup ? popup.querySelector(".popup-detail-link") : null;
-        if (detailLink) {
-          detailLink.addEventListener("click", () => selectEntry(entry.id, false, true), { once: true });
-        }
-      });
-      state.markers.set(entry.id, marker);
+      const key = coords[0] + "," + coords[1];
+      if (!groups.has(key)) {
+        groups.set(key, { key, coords, city: entry.city, entries: [] });
+      }
+      groups.get(key).entries.push(entry);
     }
 
-    if (entries.length > 1) {
-      const bounds = L.latLngBounds(entries.map(getEntryCoordinates));
+    for (const group of groups.values()) {
+      const marker = L.marker(group.coords).addTo(state.map);
+      marker.bindPopup(buildCityPopup(group));
+      marker.on("popupopen", () => {
+        const popup = marker.getPopup && marker.getPopup().getElement ? marker.getPopup().getElement() : null;
+        if (!popup) {
+          return;
+        }
+        popup.querySelectorAll(".popup-detail-link").forEach((link) => {
+          link.classList.toggle("is-active", link.dataset.id === state.selectedId);
+          link.addEventListener("click", () => selectEntry(link.dataset.id, false, true), { once: true });
+        });
+      });
+      state.markers.set(group.key, marker);
+      for (const entry of group.entries) {
+        state.markerByEntry.set(entry.id, marker);
+      }
+    }
+
+    if (groups.size > 1) {
+      const bounds = L.latLngBounds(Array.from(groups.values(), (g) => g.coords));
       state.map.fitBounds(bounds, { padding: [36, 36] });
-    } else if (entries.length === 1) {
-      state.map.setView(getEntryCoordinates(entries[0]), 7);
+    } else if (groups.size === 1) {
+      state.map.setView(Array.from(groups.values())[0].coords, 7);
     }
   }
 
@@ -621,8 +653,8 @@
     }
     if (state.map) {
       state.map.setView(getEntryCoordinates(entry), Math.max(state.map.getZoom(), 6), { animate: true });
-      if (state.markers.has(entry.id)) {
-        state.markers.get(entry.id).openPopup();
+      if (state.markerByEntry.has(entry.id)) {
+        state.markerByEntry.get(entry.id).openPopup();
       }
     }
   }
