@@ -606,6 +606,49 @@ window.MOZART_JOURNEY_DATA = [
     }
   },
   {
+    "id": "mannheim-1777-piano-sonata-9",
+    "year": 1777,
+    "city": "Mannheim",
+    "country": "Germany",
+    "place": {
+      "name": "Pfälzer Hof / F 3 lodging",
+      "address": "Paradeplatz / F 3 area, Mannheim",
+      "kind": "停留住所",
+      "certainty": "较稳",
+      "note": "莫扎特 1777 年秋抵达曼海姆后先住在 Pfälzer Hof（Paradeplatz 旁），因停留拉长后搬入 F 3 住所。K. 311 在曼海姆期间写成，与 K. 309 属同一批键盘作品。",
+      "lat": 49.4874,
+      "lng": 8.466,
+      "source": {
+        "label": "Mannheim.de: Paradeplatz - Pfälzer Hof",
+        "url": "https://www.mannheim.de/de/tourismus-entdecken/stadtgeschichte/stadtpunkte/festung-planstadt-residenz/paradeplatz-pfaelzer-hof"
+      }
+    },
+    "lat": 49.4875,
+    "lng": 8.466,
+    "work": "Piano Sonata No. 9 in D major",
+    "catalogue": "K. 311",
+    "genre": "Keyboard",
+    "period": "1773-1781",
+    "collections": [
+      "job-search"
+    ],
+    "context": "K. 311 与 K. 309 同属 1777 年曼海姆时期，是莫扎特与母亲离开萨尔茨堡求职旅程中的键盘作品。D 大调明亮宽广，第一乐章带有协奏曲式的活力与对比，被认为是曼海姆管弦乐团风格对莫扎特键盘写法的一次影响。",
+    "meaning": "这首奏鸣曲常被视为莫扎特曼海姆时期最「开阔」的钢琴作品之一。D 大调赋予它辉煌感，第一乐章的主题对比和第三乐章的轮旋曲都带有公共演奏的舞台气质，与私人沙龙的亲密感截然不同。",
+    "source": {
+      "label": "The Mozart Portal: K. 311",
+      "url": "https://www.mozartportal.com/en/composition/kv-311-piano-sonata-no-9-in-d",
+      "summary": "来源将 K. 311 置于 1777 年曼海姆时期，与 K. 309 同属这批旅行键盘作品；D 大调写法宽广、外向，带有曼海姆管弦乐影响。"
+    },
+    "listening": {
+      "target": "Piano Sonata No. 9 in D major, K. 311",
+      "note": "曼海姆时期的钢琴奏鸣曲：D 大调明亮宽广，第一乐章有协奏曲式活力，带有曼海姆管弦乐团风格的影响。",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=Mozart%20Piano%20Sonata%20No.%209%20in%20D%20major%20K.%20311",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart%20Piano%20Sonata%20No.%209%20in%20D%20major%20K.%20311",
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Piano%20Sonata%20No.%209%20in%20D%20major%20K.%20311",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Piano%20Sonata%20No.%209%20in%20D%20major%20K.%20311"
+    }
+  },
+  {
     "id": "paris-1778-paris-symphony",
     "year": 1778,
     "city": "Paris",
