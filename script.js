@@ -135,6 +135,7 @@
       "sources.title": "保守表述，便于后续扩展",
       "sources.intro": "第一版选取少量关键节点，来源字段保存在 JSON 数据中。对委约、首演或用途不确定的作品，页面采用“通常认为”“具体场合不清楚”等保守表达。",
       "footer.text": "静态网页原型 · Leaflet + OpenStreetMap · 内容可在 <code>data/mozart-journey.json</code> 中维护",
+      "footer.sister": "姊妹作品：<a href=\"https://moltpany.github.io/beethoven-journey/\">Beethoven Journey</a> · 音乐枢纽：<a href=\"https://moltpany.github.io/music-diary/\">Music Diary</a> · 回到 <a href=\"https://moltpany.github.io/\">Moltpany</a>",
       "theme.toLight": "白天",
       "theme.toDark": "黑夜",
       "theme.ariaToLight": "切换到白天模式",
@@ -205,6 +206,7 @@
       "sources.title": "Cautious wording, easy to extend later",
       "sources.intro": "This first version picks a small set of key nodes, with source fields kept in the JSON data. For works whose commission, premiere or purpose is uncertain, the page uses cautious wording such as “generally thought” or “the exact occasion is unclear”.",
       "footer.text": "Static web prototype · Leaflet + OpenStreetMap · content lives in <code>data/mozart-journey.json</code>",
+      "footer.sister": "Sister project: <a href=\"https://moltpany.github.io/beethoven-journey/\">Beethoven Journey</a> · music hub: <a href=\"https://moltpany.github.io/music-diary/\">Music Diary</a> · back to <a href=\"https://moltpany.github.io/\">Moltpany</a>",
       "theme.toLight": "Light",
       "theme.toDark": "Dark",
       "theme.ariaToLight": "Switch to light mode",
@@ -229,10 +231,46 @@
     markers: new Map(),
     clusterGroup: null,
     lang: "zh",
+    enById: new Map(),
   };
 
   function normalizeLang(lang) {
     return SUPPORTED_LANGS.includes(lang) ? lang : "zh";
+  }
+
+  // Merge the English per-entry overlay (data/mozart-journey.en.*) on top of the
+  // base Chinese entry when the page is in English. The base data stays the
+  // single source of truth; the overlay only carries translated prose.
+  function localize(entry) {
+    if (!entry || normalizeLang(state.lang) !== "en") {
+      return entry;
+    }
+    const overlay = state.enById.get(entry.id);
+    if (!overlay) {
+      return entry;
+    }
+    const merged = { ...entry };
+    if (overlay.context) merged.context = overlay.context;
+    if (overlay.meaning) merged.meaning = overlay.meaning;
+    if (overlay.source) merged.source = { ...entry.source, ...overlay.source };
+    if (overlay.listening && entry.listening) merged.listening = { ...entry.listening, ...overlay.listening };
+    if (overlay.place && entry.place) merged.place = { ...entry.place, ...overlay.place };
+    return merged;
+  }
+
+  async function loadEnglishOverlay() {
+    try {
+      const response = await fetch("data/mozart-journey.en.json");
+      if (response.ok) {
+        return response.json();
+      }
+    } catch (error) {
+      // fall through to the inline fallback below
+    }
+    if (Array.isArray(window.MOZART_JOURNEY_DATA_EN)) {
+      return window.MOZART_JOURNEY_DATA_EN;
+    }
+    return [];
   }
 
   function t(key) {
@@ -815,20 +853,21 @@
       return;
     }
 
-    setText("detail-work", `${entry.work} ${entry.catalogue}`);
+    const localized = localize(entry);
+    setText("detail-work", `${localized.work} ${localized.catalogue}`);
     setText("detail-meta", `${entry.year} · ${formatAge(entry.year)} · ${entry.city}, ${entry.country} · ${entry.genre}`);
-    setText("detail-context", entry.context);
-    setText("detail-meaning", entry.meaning);
+    setText("detail-context", localized.context);
+    setText("detail-meaning", localized.meaning);
     renderDetailCollections(entry);
-    renderListening(entry);
-    renderPlace(entry.place);
+    renderListening(localized);
+    renderPlace(localized.place);
     const mapLink = $("detail-map-link");
     if (mapLink) {
       mapLink.hidden = false;
     }
     const source = $("detail-source");
-    source.href = entry.source.url;
-    source.textContent = `${t("detail.source")}${sep()}${entry.source.label}`;
+    source.href = localized.source.url;
+    source.textContent = `${t("detail.source")}${sep()}${localized.source.label}`;
     source.hidden = false;
   }
 
@@ -1065,7 +1104,9 @@
     try {
       initLang();
       initTheme();
-      state.entries = (await loadEntries()).sort(byYearThenCity);
+      const [entries, overlay] = await Promise.all([loadEntries(), loadEnglishOverlay()]);
+      state.entries = entries.sort(byYearThenCity);
+      state.enById = new Map((overlay || []).map((item) => [item.id, item]));
       initFilters(state.entries);
       initMap();
       initDetailActions();

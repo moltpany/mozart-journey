@@ -992,3 +992,15 @@ html[data-theme="dark"] .marker-cluster div {
   background: var(--accent);
   color: #261f1b;
 }
+
+/* Cross-links to sibling sites (Beethoven Journey, Music Diary) in the nav. */
+.nav-links a.cross-link {
+  color: rgba(255, 248, 234, 0.7);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.nav-links a.cross-link:hover,
+.nav-links a.cross-link:focus-visible {
+  color: rgba(255, 248, 234, 0.96);
+  text-decoration: underline;
+}
